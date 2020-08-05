@@ -40,14 +40,18 @@ public class AppModel extends Application {
             HBox opcionesSuperiores = new HBox();
             opcionesSuperiores.setSpacing(10);
             Button opcionSuperiorIzqierda = new Button("opcion 1");
+            opcionSuperiorIzqierda.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
             Button opcionSuperiorDerecha = new Button("opcion 2");
-            opcionesSuperiores.getChildren().add(opcionSuperiorDerecha);
+            opcionSuperiorDerecha.setBackground(new Background(new BackgroundFill(Color.BLUE, CornerRadii.EMPTY, Insets.EMPTY)));
             opcionesSuperiores.getChildren().add(opcionSuperiorIzqierda);
+            opcionesSuperiores.getChildren().add(opcionSuperiorDerecha);
 
             HBox opcionesInferiores = new HBox();
             opcionesInferiores.setSpacing(10);
             Button opcionInferiorIzquierda = new Button("opcion 3");
+            opcionInferiorIzquierda.setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));
             Button opcionInferiorDerecha = new Button("opcion 4");
+            opcionInferiorDerecha.setBackground(new Background(new BackgroundFill(Color.YELLOW, CornerRadii.EMPTY, Insets.EMPTY)));
             opcionesInferiores.getChildren().add(opcionInferiorIzquierda);
             opcionesInferiores.getChildren().add(opcionInferiorDerecha);
 
