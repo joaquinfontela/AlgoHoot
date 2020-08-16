@@ -2,23 +2,22 @@ package edu.fiuba.algo3.interfaz.layouts;
 
 import edu.fiuba.algo3.controladores.BotonEnviarRespuestaHandler;
 import edu.fiuba.algo3.interfaz.botones.botonesComunes.BotonEnviarRespuesta;
-import edu.fiuba.algo3.interfaz.layouts.preguntaSubLayouts.LayoutBonificaciones;
-import edu.fiuba.algo3.interfaz.layouts.preguntaSubLayouts.LayoutEnunciadoPregunta;
-import edu.fiuba.algo3.interfaz.layouts.preguntaSubLayouts.LayoutIzquierdoPregunta;
-import edu.fiuba.algo3.interfaz.layouts.preguntaSubLayouts.GeneradorLayoutOpciones;
+import edu.fiuba.algo3.interfaz.layouts.preguntaSubLayouts.*;
 import edu.fiuba.algo3.modelo.GestorDeJuego;
 import javafx.geometry.Insets;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-public abstract class LayoutPregunta extends BorderPane {
+public class LayoutPregunta extends BorderPane {
 
     protected GeneradorLayoutOpciones generadorLayoutOpciones;
     private LayoutIzquierdoPregunta layoutIzquierdo;
 
     public LayoutPregunta(Stage stage, GestorDeJuego gestor) {
 
+        generadorLayoutOpciones = new GeneradorLayoutOpciones();
+        this.setCenter(generadorLayoutOpciones.generarLayout(gestor.obtenerEnunciadosOpcionesActuales(), gestor));
         LayoutBonificaciones layoutBonificaciones = new LayoutBonificaciones(gestor);
         layoutIzquierdo = new LayoutIzquierdoPregunta(stage, gestor);
         LayoutEnunciadoPregunta layoutEnunciado = new LayoutEnunciadoPregunta(gestor.obtenerEnunciadoPreguntaActual());
