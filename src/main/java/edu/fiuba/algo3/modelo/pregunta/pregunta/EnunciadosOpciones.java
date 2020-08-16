@@ -48,8 +48,14 @@ public class EnunciadosOpciones {
 
     private void agregarEnunciado(String enunciado, int identificadorDondeAgregar, int identificadorDondeEliminar) {
 
-        opciones.get(identificadorDondeEliminar).remove(enunciado);
+        if (opciones.get(identificadorDondeEliminar).contains(enunciado)) {
+            opciones.get(identificadorDondeEliminar).remove(enunciado);
+        }
         this.agregarEnunciadoEidentificador(identificadorDondeAgregar,enunciado);
+    }
+
+    public int obtenerOrden() {
+        return orden;
     }
 
     public void agregarEnunciadoEnOrden(String enunciado) {

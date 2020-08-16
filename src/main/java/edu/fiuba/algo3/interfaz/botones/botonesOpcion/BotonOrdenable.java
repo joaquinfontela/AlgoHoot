@@ -13,4 +13,12 @@ public abstract class BotonOrdenable extends Button {
         this.setTranslateX(posX);
         this.setTranslateY(posY);
     }
+
+    public void setPosicion(Integer pos) {
+        posicion = pos;
+    }
+
+    public Integer getPosicion() {
+        return posicion;
+    }
 }
