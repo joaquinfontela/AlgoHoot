@@ -9,6 +9,8 @@ public class DistribuidorDeCincoOpciones extends DistribuidorDeOpcionesChicas {
 
     public DistribuidorDeCincoOpciones(ArrayList<String> opciones, GestorDeJuego gestor, EnunciadosOpciones opcionesRespuesta) {
 
+        this.agregarOpcion(opciones.get(0), -400,-30,
+                Color.RED, gestor, opcionesRespuesta);
         this.agregarOpcion(opciones.get(1), 400,-30,
                 Color.BLUE, gestor, opcionesRespuesta);
         this.agregarOpcion(opciones.get(2), -400,80,

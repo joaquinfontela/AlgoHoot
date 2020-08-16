@@ -48,7 +48,7 @@ public class EnunciadosOpciones {
 
     private void agregarEnunciado(String enunciado, int identificadorDondeAgregar, int identificadorDondeEliminar) {
 
-        if (opciones.get(identificadorDondeEliminar).contains(enunciado)) {
+        if (opciones.get(identificadorDondeEliminar) != null) {
             opciones.get(identificadorDondeEliminar).remove(enunciado);
         }
         this.agregarEnunciadoEidentificador(identificadorDondeAgregar,enunciado);
