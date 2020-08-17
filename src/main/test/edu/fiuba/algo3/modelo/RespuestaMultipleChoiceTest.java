@@ -20,7 +20,7 @@ public class RespuestaMultipleChoiceTest {
     RespuestaMultipleChoice respuestaRecibida;
 
     @BeforeEach
-    public void init() {
+    public void init() throws Exception {
 
         //cC
 
@@ -40,7 +40,7 @@ public class RespuestaMultipleChoiceTest {
     }
 
     @Test
-    public void test01CreoDosRespuestasYLasComparoEsperandoObtenerTresCorrectas() {
+    public void test01CreoDosRespuestasYLasComparoEsperandoObtenerTresCorrectas() throws Exception {
 
         enunciadosOpcionesRespuestaRecibida.agregarEnunciadoEidentificador(1, "Rojo");
         enunciadosOpcionesRespuestaRecibida.agregarEnunciadoEidentificador(1, "Azul");
@@ -58,7 +58,7 @@ public class RespuestaMultipleChoiceTest {
     }
 
     @Test
-    public void test03CreoDosRespuestasYLasComparoEsperandoObtenerDosCorrectasIncorrectasYCorrectasNoElegidas() {
+    public void test03CreoDosRespuestasYLasComparoEsperandoObtenerDosCorrectasIncorrectasYCorrectasNoElegidas() throws Exception {
 
         enunciadosOpcionesRespuestaRecibida.agregarEnunciadoEidentificador(1, "Rojo");
         enunciadosOpcionesRespuestaRecibida.agregarEnunciadoEidentificador(1, "Azul");
@@ -76,7 +76,7 @@ public class RespuestaMultipleChoiceTest {
     }
 
     @Test
-    public void test03CreoDosRespuestasYLasComparoEsperandoObtenerDosCorrectasYCorrectasNoElegidas() {
+    public void test03CreoDosRespuestasYLasComparoEsperandoObtenerDosCorrectasYCorrectasNoElegidas() throws Exception {
 
         enunciadosOpcionesRespuestaRecibida.agregarEnunciadoEidentificador(1, "Rojo");
         enunciadosOpcionesRespuestaRecibida.agregarEnunciadoEidentificador(1, "Azul");
@@ -94,7 +94,7 @@ public class RespuestaMultipleChoiceTest {
     }
 
     @Test
-    public void test04CreoDosRespuestasYLasComparoEsperandoIncorrectasYCorrectasNoElegidas() {
+    public void test04CreoDosRespuestasYLasComparoEsperandoIncorrectasYCorrectasNoElegidas() throws Exception {
 
         enunciadosOpcionesRespuestaRecibida.agregarEnunciadoEidentificador(0, "Rojo");
         enunciadosOpcionesRespuestaRecibida.agregarEnunciadoEidentificador(0, "Azul");
@@ -112,7 +112,7 @@ public class RespuestaMultipleChoiceTest {
     }
 
     @Test
-    public void test05CreoDosRespuestasYLasComparoEsperandoObtenerUnaCorrectaIncorrectasYCorrectasNoElegidas() {
+    public void test05CreoDosRespuestasYLasComparoEsperandoObtenerUnaCorrectaIncorrectasYCorrectasNoElegidas() throws Exception {
 
         enunciadosOpcionesRespuestaRecibida.agregarEnunciadoEidentificador(1, "Rojo");
         enunciadosOpcionesRespuestaRecibida.agregarEnunciadoEidentificador(0, "Azul");

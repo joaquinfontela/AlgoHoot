@@ -8,7 +8,7 @@ public abstract class Respuesta {
 
     public abstract EstadisticasRespuesta compararCon(Respuesta otraRespuesta);
 
-    public abstract void rellenar(EnunciadosOpciones opcionesParaAgregar);
+    public abstract void rellenar(EnunciadosOpciones opcionesParaAgregar) throws Exception;
 
     public abstract ArrayList<String> obtenerEnunciadosOpciones();
 

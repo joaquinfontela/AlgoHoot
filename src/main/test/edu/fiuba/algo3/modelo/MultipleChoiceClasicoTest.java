@@ -20,7 +20,7 @@ public class MultipleChoiceClasicoTest {
     Pregunta pregunta;
 
     @BeforeEach
-    public void init() {
+    public void init() throws Exception {
 
         Modalidad modalidad = new ModalidadClasica();
 
@@ -39,7 +39,7 @@ public class MultipleChoiceClasicoTest {
     }
 
     @Test
-    public void test01seCreaUnaPreguntaMultipleChoiceClasicaYSeVerificaLaOpcionCorrecta() {
+    public void test01seCreaUnaPreguntaMultipleChoiceClasicaYSeVerificaLaOpcionCorrecta() throws Exception {
 
         RespuestaMultipleChoice respuestaCorrectaVerificacion = new RespuestaMultipleChoice();
 
@@ -54,7 +54,7 @@ public class MultipleChoiceClasicoTest {
     }
 
     @Test
-    public void test02seCreaUnaPreguntaMultipleChoiceClasicaYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test02seCreaUnaPreguntaMultipleChoiceClasicaYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         Jugador jugador1 = new Jugador("Santiago");
         Jugador jugador2 = new Jugador("Roberto");

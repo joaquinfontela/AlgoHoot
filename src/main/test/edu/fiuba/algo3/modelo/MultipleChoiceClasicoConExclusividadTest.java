@@ -60,7 +60,7 @@ public class MultipleChoiceClasicoConExclusividadTest {
     }
 
     @Test
-    public void test01seCreaUnaPreguntaMultipleChoiceClasicaYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test01seCreaUnaPreguntaMultipleChoiceClasicaYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Ornitorrinco");
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Pez piedra");
@@ -90,7 +90,7 @@ public class MultipleChoiceClasicoConExclusividadTest {
     }
 
     @Test
-    public void test02seCreaUnaPreguntaMultipleChoiceClasicaYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test02seCreaUnaPreguntaMultipleChoiceClasicaYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Ornitorrinco");
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Pez piedra");
@@ -120,7 +120,7 @@ public class MultipleChoiceClasicoConExclusividadTest {
     }
 
     @Test
-    public void test03seCreaUnaPreguntaMultipleChoiceClasicaYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test03seCreaUnaPreguntaMultipleChoiceClasicaYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Ornitorrinco");
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Pez piedra");

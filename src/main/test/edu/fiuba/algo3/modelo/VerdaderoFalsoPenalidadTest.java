@@ -20,7 +20,7 @@ public class VerdaderoFalsoPenalidadTest {
     Pregunta pregunta;
 
     @BeforeEach
-    public void init() {
+    public void init() throws Exception {
 
         Modalidad modalidad = new ModalidadPenalidad();
 
@@ -36,7 +36,7 @@ public class VerdaderoFalsoPenalidadTest {
     }
 
     @Test
-    public void test01seCreaUnaPreguntaVerdaderoOFalsoPenalidadYSeVerificaLaOpcionCorrecta() {
+    public void test01seCreaUnaPreguntaVerdaderoOFalsoPenalidadYSeVerificaLaOpcionCorrecta() throws Exception {
 
         RespuestaVerdaderoFalso respuestaCorrectaVerificacion = new RespuestaVerdaderoFalso();
 
@@ -48,7 +48,7 @@ public class VerdaderoFalsoPenalidadTest {
     }
 
     @Test
-    public void test02seCreaUnaPreguntaVerdaderoOFalsoPenalidadYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test02seCreaUnaPreguntaVerdaderoOFalsoPenalidadYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         Jugador jugador1 = new Jugador("Santiago");
         Jugador jugador2 = new Jugador("Roberto");

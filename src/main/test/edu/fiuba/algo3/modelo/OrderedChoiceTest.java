@@ -20,7 +20,7 @@ public class OrderedChoiceTest {
     Pregunta pregunta;
 
     @BeforeEach
-    public void init() {
+    public void init() throws Exception {
 
         Modalidad modalidad = new ModalidadClasica();
 
@@ -43,7 +43,7 @@ public class OrderedChoiceTest {
     }
 
     @Test
-    public void test01seCreaUnaPreguntaOrderedChoiceYSeVerificaLaOpcionCorrecta() {
+    public void test01seCreaUnaPreguntaOrderedChoiceYSeVerificaLaOpcionCorrecta() throws Exception {
 
         RespuestaOrderedChoice respuestaCorrectaVerificacion = new RespuestaOrderedChoice();
 
@@ -61,7 +61,7 @@ public class OrderedChoiceTest {
     }
 
     @Test
-    public void test02seCreaUnaPreguntaOrderedChoiceYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test02seCreaUnaPreguntaOrderedChoiceYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         Jugador jugador1 = new Jugador("Santiago");
         Jugador jugador2 = new Jugador("Roberto");
@@ -101,7 +101,7 @@ public class OrderedChoiceTest {
     }
 
     @Test
-    public void test03seCreaUnaPreguntaOrderedChoiceYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test03seCreaUnaPreguntaOrderedChoiceYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         Jugador jugador1 = new Jugador("Santiago");
         Jugador jugador2 = new Jugador("Roberto");

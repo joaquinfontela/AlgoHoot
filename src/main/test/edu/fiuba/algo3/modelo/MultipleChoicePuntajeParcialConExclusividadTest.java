@@ -1,4 +1,4 @@
-//package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.pregunta.modalidad.modalidad.Modalidad;
@@ -64,7 +64,7 @@ public class MultipleChoicePuntajeParcialConExclusividadTest {
     }
 
     @Test
-    public void test01seCreaUnaPreguntaMultipleChoicePuntajeParcialYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test01seCreaUnaPreguntaMultipleChoicePuntajeParcialYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Ornitorrinco");
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Pez piedra");
@@ -94,7 +94,7 @@ public class MultipleChoicePuntajeParcialConExclusividadTest {
     }
 
     @Test
-    public void test02seCreaUnaPreguntaMultipleChoicePuntajeParcialYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test02seCreaUnaPreguntaMultipleChoicePuntajeParcialYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Ornitorrinco");
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(0, "Pez piedra");
@@ -124,7 +124,7 @@ public class MultipleChoicePuntajeParcialConExclusividadTest {
     }
 
     @Test
-    public void test03seCreaUnaPreguntaMultipleChoicePuntajeParcialYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test03seCreaUnaPreguntaMultipleChoicePuntajeParcialYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Ornitorrinco");
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Pez piedra");
@@ -154,7 +154,7 @@ public class MultipleChoicePuntajeParcialConExclusividadTest {
     }
 
     @Test
-    public void test04seCreaUnaPreguntaMultipleChoicePuntajeParcialYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test04seCreaUnaPreguntaMultipleChoicePuntajeParcialYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Ornitorrinco");
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(0, "Pez piedra");

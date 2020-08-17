@@ -20,7 +20,7 @@ public class GroupChoiceTest {
     Pregunta pregunta;
 
     @BeforeEach
-    public void init() {
+    public void init() throws Exception {
 
         Modalidad modalidad = new ModalidadClasica();
 

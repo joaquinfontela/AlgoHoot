@@ -54,8 +54,9 @@ public class LectorDeArchivo {
         int tipoPreguntaId = preguntaEnFormatoJson.getAsJsonObject().get("tipo pregunta id").getAsInt();
         String enunciadoPregunta = preguntaEnFormatoJson.getAsJsonObject().get("enunciado").getAsString();
 
-        informacionPreguntas.add(new InformacionPregunta(modalidadId, tipoPreguntaId,
-                                                            enunciadoPregunta, enunciadosOpciones));
+            informacionPreguntas.add(new InformacionPregunta(modalidadId, tipoPreguntaId,
+                    enunciadoPregunta, enunciadosOpciones));
+
     }
 
     private EnunciadosOpciones obtenerEnunciadosOpcionesDeLaPregunta(JsonElement preguntaEnFormatoJson) {

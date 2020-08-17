@@ -30,7 +30,7 @@ public class RespuestaVerdaderoFalso extends Respuesta {
     }
 
     @Override
-    public void rellenar(EnunciadosOpciones opcionesParaAgregar) {
+    public void rellenar(EnunciadosOpciones opcionesParaAgregar) throws Exception {
 
         opcionCorrecta = new Opcion(opcionesParaAgregar.enunciadosCorrectos().get(0));
         opcionIncorrecta = new Opcion(opcionesParaAgregar.enunciadosIncorrectos().get(0));

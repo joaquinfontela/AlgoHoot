@@ -19,7 +19,7 @@ public class VerdaderoFalsoClasicoTest {
     Pregunta pregunta;
 
     @BeforeEach
-    public void init() {
+    public void init() throws Exception {
 
         Modalidad modalidad = new ModalidadClasica();
 
@@ -34,7 +34,7 @@ public class VerdaderoFalsoClasicoTest {
     }
 
     @Test
-    public void test01seCreaUnaPreguntaVerdaderoOFalsoYSeVerificaLaOpcionCorrecta() {
+    public void test01seCreaUnaPreguntaVerdaderoOFalsoYSeVerificaLaOpcionCorrecta() throws Exception {
 
         RespuestaVerdaderoFalso respuestaCorrectaVerificacion = new RespuestaVerdaderoFalso();
 
@@ -46,7 +46,7 @@ public class VerdaderoFalsoClasicoTest {
     }
 
     @Test
-    public void test02seCreaUnaPreguntaVerdaderoOFalsoYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test02seCreaUnaPreguntaVerdaderoOFalsoYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
         
         Jugador jugador1 = new Jugador("Santiago");
         Jugador jugador2 = new Jugador("Roberto");

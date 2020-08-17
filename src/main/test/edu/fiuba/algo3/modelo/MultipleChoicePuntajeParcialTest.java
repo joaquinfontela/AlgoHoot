@@ -20,7 +20,7 @@ public class MultipleChoicePuntajeParcialTest {
     Pregunta pregunta;
 
     @BeforeEach
-    public void init() {
+    public void init() throws Exception {
 
         Modalidad modalidad = new ModalidadPuntajeParcial();
 
@@ -38,7 +38,7 @@ public class MultipleChoicePuntajeParcialTest {
     }
 
     @Test
-    public void test01seCreaUnaPreguntaMultipleChoicePuntajeParcialYSeVerificaLaOpcionCorrecta() {
+    public void test01seCreaUnaPreguntaMultipleChoicePuntajeParcialYSeVerificaLaOpcionCorrecta() throws Exception {
 
         RespuestaMultipleChoice respuestaCorrectaVerificacion = new RespuestaMultipleChoice();
 
@@ -53,7 +53,7 @@ public class MultipleChoicePuntajeParcialTest {
     }
 
     @Test
-    public void test02seCreaUnaPreguntaMultipleChoicePuntajeParcialYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test02seCreaUnaPreguntaMultipleChoicePuntajeParcialYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         Jugador jugador1 = new Jugador("Santiago");
         Jugador jugador2 = new Jugador("Roberto");

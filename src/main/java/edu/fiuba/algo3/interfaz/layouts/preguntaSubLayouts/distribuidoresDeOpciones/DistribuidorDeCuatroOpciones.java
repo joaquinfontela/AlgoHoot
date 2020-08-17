@@ -37,6 +37,7 @@ public class DistribuidorDeCuatroOpciones extends StackPane {
             opcion.setOnAction(new BotonAgrupableHandler((BotonAgrupable)opcion, opcionesRespuesta));
         } else if (gestor.esTipoDeRespuestaComparable(RespuestaOrderedChoice.class)) {
             opcion = new BotonOrdenableChicoLargo(enunciado, desplazamientoEnX, desplazamientoEnY, color);
+            opcionesRespuesta.agregarEnunciadoNoOrdenado(enunciado);
             opcion.setOnAction(new BotonOrdenableHandler((BotonOrdenable)opcion, opcionesRespuesta));
         } else {
             opcion = new BotonOpcionSeleccionableChicoLargo(enunciado, desplazamientoEnX, desplazamientoEnY, color);

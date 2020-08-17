@@ -1,4 +1,4 @@
-//package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.pregunta.modalidad.modalidad.Modalidad;
@@ -61,7 +61,7 @@ public class VerdaderoFalsoClasicoConExclusividadTest {
     }
 
     @Test
-    public void test01seCreaUnaPreguntaVerdaderoOFalsoYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test01seCreaUnaPreguntaVerdaderoOFalsoYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         Jugador jugador1 = new Jugador("Santiago");
 
@@ -96,7 +96,7 @@ public class VerdaderoFalsoClasicoConExclusividadTest {
     }
 
     @Test
-    public void test02seCreaUnaPreguntaVerdaderoOFalsoYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test02seCreaUnaPreguntaVerdaderoOFalsoYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         Jugador jugador1 = new Jugador("Santiago");
 
@@ -131,7 +131,7 @@ public class VerdaderoFalsoClasicoConExclusividadTest {
     }
 
     @Test
-    public void test03seCreaUnaPreguntaVerdaderoOFalsoYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test03seCreaUnaPreguntaVerdaderoOFalsoYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         Jugador jugador1 = new Jugador("Santiago");
         Jugador jugador2 = new Jugador("Roberto");

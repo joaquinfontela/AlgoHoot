@@ -1,4 +1,4 @@
-//package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.pregunta.modalidad.modalidad.Modalidad;
@@ -66,7 +66,7 @@ public class OrderedChoiceConExclusividadTest {
     }
 
     @Test
-    public void test01seCreaUnaPreguntaOrderedChoiceYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test01seCreaUnaPreguntaOrderedChoiceYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(0, "Brasil");
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Alemania");
@@ -97,7 +97,7 @@ public class OrderedChoiceConExclusividadTest {
     }
 
     @Test
-    public void test02seCreaUnaPreguntaOrderedChoiceYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test02seCreaUnaPreguntaOrderedChoiceYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(0, "Belgica");
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Alemania");
@@ -128,7 +128,7 @@ public class OrderedChoiceConExclusividadTest {
     }
 
     @Test
-    public void test03seCreaUnaPreguntaOrderedChoiceYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test03seCreaUnaPreguntaOrderedChoiceYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(0, "Brasil");
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Alemania");

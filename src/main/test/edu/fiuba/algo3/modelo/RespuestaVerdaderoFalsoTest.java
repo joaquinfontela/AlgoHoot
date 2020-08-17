@@ -26,7 +26,7 @@ public class RespuestaVerdaderoFalsoTest {
     }
 
     @Test
-    public void test01creoDosRespuestasYLasComparoEsperandoObtenerUnaCorrectaElegida() {
+    public void test01creoDosRespuestasYLasComparoEsperandoObtenerUnaCorrectaElegida() throws Exception {
 
         enunciadosOpcionesRespuestaCorrecta.agregarEnunciadoEidentificador(0, "Falso");
         enunciadosOpcionesRespuestaCorrecta.agregarEnunciadoEidentificador(1, "Verdadero");
@@ -44,7 +44,7 @@ public class RespuestaVerdaderoFalsoTest {
     }
 
     @Test
-    public void test02creoDosRespuestasYLasComparoEsperandoObtenerUnaIncorrectaElegida() {
+    public void test02creoDosRespuestasYLasComparoEsperandoObtenerUnaIncorrectaElegida() throws Exception {
 
         enunciadosOpcionesRespuestaCorrecta.agregarEnunciadoEidentificador(0, "Verdadero");
         enunciadosOpcionesRespuestaCorrecta.agregarEnunciadoEidentificador(1, "Falso");

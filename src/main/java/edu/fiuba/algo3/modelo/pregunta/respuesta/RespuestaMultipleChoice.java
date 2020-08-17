@@ -76,7 +76,7 @@ public class RespuestaMultipleChoice extends Respuesta{
     }
 
     @Override
-    public void rellenar(EnunciadosOpciones opcionesParaAgregar) {
+    public void rellenar(EnunciadosOpciones opcionesParaAgregar) throws Exception {
 
         for (int i = 0; i < (opcionesParaAgregar.enunciadosCorrectos()).size(); i++) {
             opcionesCorrectas.add(new Opcion(opcionesParaAgregar.enunciadosCorrectos().get(i)));

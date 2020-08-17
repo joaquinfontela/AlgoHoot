@@ -29,7 +29,7 @@ public class RespuestaOrderedChoice extends Respuesta {
     }
 
     @Override
-    public void rellenar(EnunciadosOpciones opcionesParaAgregar) {
+    public void rellenar(EnunciadosOpciones opcionesParaAgregar) throws Exception {
 
         for (String enunciado : opcionesParaAgregar.enunciadosOrdenados()){
             opcionesOrdenadas.add(new Opcion(enunciado));

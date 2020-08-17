@@ -55,13 +55,19 @@ public class EnunciadosOpciones {
     }
 
     public int obtenerOrden() {
+
         return orden;
     }
 
     public void agregarEnunciadoEnOrden(String enunciado) {
 
-        this.agregarEnunciadoEidentificador(orden, enunciado);
+        this.agregarEnunciado(enunciado, orden, -1);
         orden = orden + 1;
+    }
+
+    public void agregarEnunciadoNoOrdenado(String enunciado) {
+
+        this.agregarEnunciadoEidentificador(-1, enunciado);
     }
 
     public void eliminarEnunciadoEnOrden(String enunciado) {
@@ -69,13 +75,13 @@ public class EnunciadosOpciones {
         int contador = 0;
         while (!opciones.get(contador).contains(enunciado) && contador < opciones.size()) contador++;
         orden = contador;
-        for (int i = contador; i < opciones.size(); i++) {
-            opciones.remove(i);
-        }
+        for (int i = contador; i < opciones.size(); i++) this.agregarEnunciado(enunciado, -1, i);
     }
 
-    public ArrayList<String> enunciadosCorrectos(){
-        return opciones.get(1);
+    public ArrayList<String> enunciadosCorrectos() throws Exception {
+
+        if (opciones.get(1) != null && !opciones.get(1).isEmpty()) return opciones.get(1);
+        throw new Exception("No ha selecionado ninguna opcion");
     }
 
     public ArrayList<String> enunciadosIncorrectos(){
@@ -83,15 +89,26 @@ public class EnunciadosOpciones {
     }
 
     public ArrayList<String> enunciadosGrupoA() {
-        return opciones.get(0);
+
+        if (opciones.get(0) == null) {
+            return new ArrayList<>();
+        } else {
+            return opciones.get(0);
+        }
     }
 
     public ArrayList<String> enunciadosGrupoB(){
-        return opciones.get(1);
+
+        if (opciones.get(1) == null) {
+            return new ArrayList<>();
+        } else {
+            return opciones.get(1);
+        }
     }
 
-    public ArrayList<String> enunciadosOrdenados() {
+    public ArrayList<String> enunciadosOrdenados() throws Exception {
 
+        if (!opciones.get(-1).isEmpty()) throw new Exception("No has ordenado todas las opciones");
         ArrayList<String> enunciadosOrdenados = new ArrayList<>();
         for (int i = 0; i < opciones.size(); i++) {
             enunciadosOrdenados.add(opciones.get(i).get(0));

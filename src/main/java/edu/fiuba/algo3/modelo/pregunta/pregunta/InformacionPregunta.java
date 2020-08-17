@@ -17,7 +17,8 @@ public class InformacionPregunta {
     private HashMap<Integer, Respuesta> id_TipoDeRespuesta;
     private HashMap<Integer, Modalidad> id_Modalidad;
 
-    public InformacionPregunta(int tipoModalidad, int tipoPregunta, String enunciadoParaAsignar, EnunciadosOpciones opciones) {
+    public InformacionPregunta(int tipoModalidad, int tipoPregunta,
+                               String enunciadoParaAsignar, EnunciadosOpciones opciones) {
 
         id_TipoDeRespuesta = new HashMap<>();
         id_TipoDeRespuesta.put(1, new RespuestaVerdaderoFalso());
@@ -30,11 +31,14 @@ public class InformacionPregunta {
         id_Modalidad.put(2, new ModalidadPenalidad());
         id_Modalidad.put(3, new ModalidadPuntajeParcial());
 
-        respuestaCorrecta = id_TipoDeRespuesta.get(tipoPregunta);
-        respuestaCorrecta.rellenar(opciones);
 
-        modalidad = id_Modalidad.get(tipoModalidad);
-        enunciado = enunciadoParaAsignar;
+        try {
+            respuestaCorrecta = id_TipoDeRespuesta.get(tipoPregunta);
+            respuestaCorrecta.rellenar(opciones);
+
+            modalidad = id_Modalidad.get(tipoModalidad);
+            enunciado = enunciadoParaAsignar;
+        } catch (Exception exception) { }
     }
 
     Modalidad obtenerModalidad() {

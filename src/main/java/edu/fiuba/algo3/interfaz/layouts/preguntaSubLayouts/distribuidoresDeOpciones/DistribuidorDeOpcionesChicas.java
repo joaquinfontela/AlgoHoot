@@ -24,6 +24,7 @@ public abstract class DistribuidorDeOpcionesChicas extends StackPane {
             opcion.setOnAction(new BotonAgrupableHandler((BotonAgrupable)opcion, opcionesRespuesta));
         } else if (gestor.esTipoDeRespuestaComparable(RespuestaOrderedChoice.class)) {
             opcion = new BotonOrdenableChico(enunciado, desplazamientoEnX, desplazamientoEnY, color);
+            opcionesRespuesta.agregarEnunciadoNoOrdenado(enunciado);
             opcion.setOnAction(new BotonOrdenableHandler((BotonOrdenable) opcion, opcionesRespuesta));
         } else {
             opcion = new BotonOpcionSeleccionableChico(enunciado, desplazamientoEnX, desplazamientoEnY, color);
