@@ -12,7 +12,8 @@ import javafx.stage.Stage;
 
 public class LayoutPregunta extends BorderPane {
 
-    protected GeneradorLayoutOpciones generadorLayoutOpciones;
+    private GeneradorLayoutOpciones generadorLayoutOpciones;
+    private LayoutBonificaciones layoutBonificaciones;
     private LayoutIzquierdoPregunta layoutIzquierdo;
     private EnunciadosOpciones opcionesRespuesta;
 
@@ -22,7 +23,7 @@ public class LayoutPregunta extends BorderPane {
 
         generadorLayoutOpciones = new GeneradorLayoutOpciones();
         this.setCenter(generadorLayoutOpciones.generarLayout(gestor, opcionesRespuesta));
-        LayoutBonificaciones layoutBonificaciones = new LayoutBonificaciones(gestor);
+        layoutBonificaciones = new LayoutBonificaciones(gestor);
         layoutIzquierdo = new LayoutIzquierdoPregunta(stage, gestor);
         LayoutEnunciadoPregunta layoutEnunciado = new LayoutEnunciadoPregunta(gestor.obtenerEnunciadoPreguntaActual());
         this.setBackground(new Background(new BackgroundFill(Color.DIMGRAY, CornerRadii.EMPTY, Insets.EMPTY)));
@@ -43,5 +44,17 @@ public class LayoutPregunta extends BorderPane {
 
     public EnunciadosOpciones obtenerOpcionesRespuestaJugador() {
         return opcionesRespuesta;
+    }
+
+    public boolean multiplicadorX2Seleccionado() {
+        return layoutBonificaciones.multiplicadorX2Seleccionado();
+    }
+
+    public boolean multiplicadorX3Seleccionado() {
+        return layoutBonificaciones.multiplicadorX3Seleccionado();
+    }
+
+    public boolean exclusividadSeleccionada() {
+        return layoutBonificaciones.exclusividadSeleccionada();
     }
 }
