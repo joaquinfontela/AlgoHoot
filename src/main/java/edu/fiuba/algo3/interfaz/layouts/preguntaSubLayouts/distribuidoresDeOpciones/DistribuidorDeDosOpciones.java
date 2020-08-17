@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.interfaz.layouts.preguntaSubLayouts.distribuidoresDeOpciones;
 
-import edu.fiuba.algo3.controladores.BotonSeleccionableHandler;
+import edu.fiuba.algo3.controladores.BotonOpcionSeleccionableHandler;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.*;
 import edu.fiuba.algo3.modelo.GestorDeJuego;
 import edu.fiuba.algo3.modelo.pregunta.pregunta.EnunciadosOpciones;
@@ -11,19 +11,21 @@ import java.util.ArrayList;
 
 public class DistribuidorDeDosOpciones extends DistribuidorDeOpcionesGrandes {
 
-    public DistribuidorDeDosOpciones(ArrayList<String> opciones, GestorDeJuego gestor, EnunciadosOpciones opcionesRespuesta) {
+    public DistribuidorDeDosOpciones(ArrayList<String> opciones, GestorDeJuego gestor,
+                                     EnunciadosOpciones opcionesRespuesta) {
 
-        if(gestor.esTipoDeRespuestaComparable(RespuestaVerdaderoFalso.class)) {
+        if (gestor.esTipoDeRespuestaComparable(RespuestaVerdaderoFalso.class)) {
             ListaOpcionesVerdaderoFalso lista = new ListaOpcionesVerdaderoFalso(opcionesRespuesta);
             this.agregarOpcionVerdaderoFalso(opciones.get(0), -245, Color.RED,
                     opcionesRespuesta, lista);
             this.agregarOpcionVerdaderoFalso(opciones.get(1), 245, Color.BLUE,
                     opcionesRespuesta, lista);
         } else {
+            ListaOpcionesOrdenables listaOrdenable = new ListaOpcionesOrdenables(opcionesRespuesta);
             this.agregarOpcion(opciones.get(0), -245, 5, Color.RED,
-                    gestor, opcionesRespuesta);
+                    gestor, opcionesRespuesta, listaOrdenable);
             this.agregarOpcion(opciones.get(1), 245, 5, Color.BLUE,
-                    gestor, opcionesRespuesta);
+                    gestor, opcionesRespuesta, listaOrdenable);
         }
     }
 
@@ -35,7 +37,7 @@ public class DistribuidorDeDosOpciones extends DistribuidorDeOpcionesGrandes {
                 5, color);
         opcionesRespuesta.agregarEnunciadoNoElegido(enunciado);
         lista.add(opcion);
-        opcion.setOnAction(new BotonSeleccionableHandler(opcion, opcionesRespuesta));
+        opcion.setOnAction(new BotonOpcionSeleccionableHandler(opcion, opcionesRespuesta));
         this.getChildren().add(opcion);
     }
 }

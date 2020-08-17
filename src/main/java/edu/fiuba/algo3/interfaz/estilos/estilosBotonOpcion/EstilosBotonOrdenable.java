@@ -25,7 +25,7 @@ public class EstilosBotonOrdenable extends ButtonSkin {
 
         boton.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
         boton.setTextFill(Color.WHITE);
-        boton.setFont(new Font("FreeSans", 50));
+        boton.setFont(new Font("FreeSans", 25));
         boton.setPrefSize(anchura, altura);
 
         eventoMousePasaPorArriba();

@@ -108,6 +108,12 @@ public class EnunciadosOpciones {
 
     public ArrayList<String> enunciadosOrdenados() throws Exception {
 
+        System.out.println(opciones.get(-1));
+        System.out.println(opciones.get(0));
+        System.out.println(opciones.get(1));
+        System.out.println(opciones.get(2));
+        System.out.println(opciones.get(3));
+        System.out.println(opciones.get(4));
         if (opciones.get(-1) != null && !opciones.get(-1).isEmpty())
             throw new Exception("No has ordenado todas las opciones");
         ArrayList<String> enunciadosOrdenados = new ArrayList<>();

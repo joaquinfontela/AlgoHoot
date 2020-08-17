@@ -5,13 +5,13 @@ import edu.fiuba.algo3.modelo.pregunta.pregunta.EnunciadosOpciones;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
-public class BotonSeleccionableHandler implements EventHandler<ActionEvent> {
+public class BotonOpcionSeleccionableHandler implements EventHandler<ActionEvent> {
 
     private EnunciadosOpciones opcionesRespuesta;
     private BotonOpcionSeleccionable boton;
 
-    public BotonSeleccionableHandler(BotonOpcionSeleccionable botonSeleccionable,
-                                     EnunciadosOpciones enunciadosOpciones) {
+    public BotonOpcionSeleccionableHandler(BotonOpcionSeleccionable botonSeleccionable,
+                                           EnunciadosOpciones enunciadosOpciones) {
 
         opcionesRespuesta = enunciadosOpciones;
         boton = botonSeleccionable;

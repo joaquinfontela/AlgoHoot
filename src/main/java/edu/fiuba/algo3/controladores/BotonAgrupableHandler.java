@@ -19,6 +19,7 @@ public class BotonAgrupableHandler implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent event) {
 
+        boton.switchGrupo();
         if (boton.esGrupoA()) {
             opcionesRespuesta.agregarEnunciadoGrupoA(boton.getText());
         } else {

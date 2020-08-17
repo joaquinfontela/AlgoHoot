@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 public abstract class BotonOrdenable extends Button {
 
     private Integer posicion;
+    private Integer posicionAnterior;
 
     public BotonOrdenable(String enunciado, double posX, double posY) {
 
@@ -15,10 +16,16 @@ public abstract class BotonOrdenable extends Button {
     }
 
     public void setPosicion(Integer pos) {
+
+        posicionAnterior = posicion;
         posicion = pos;
     }
 
     public Integer getPosicion() {
         return posicion;
+    }
+
+    public Integer getPosicionAnterior() {
+        return posicionAnterior;
     }
 }

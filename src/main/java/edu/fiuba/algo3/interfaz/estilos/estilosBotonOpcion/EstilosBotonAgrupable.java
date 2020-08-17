@@ -22,11 +22,11 @@ public class EstilosBotonAgrupable extends ButtonSkin {
 
         boton = unBoton;
 
-        boton.setStyle("-fx-border-color: black; -fx-border-width: 2px");
+        boton.setStyle("-fx-border-color: white; -fx-border-width: 2px");
 
         boton.setBackground(new Background(new BackgroundFill(Color.BLACK, CornerRadii.EMPTY, Insets.EMPTY)));
         boton.setTextFill(Color.WHITE);
-        boton.setFont(new Font("FreeSans", 50));
+        boton.setFont(new Font("FreeSans", 25));
         boton.setPrefSize(anchura, altura);
 
         eventoMousePasaPorArriba();
@@ -57,7 +57,6 @@ public class EstilosBotonAgrupable extends ButtonSkin {
         boton.setOnMouseClicked(e -> {
 
             if (e.getEventType().equals(MouseEvent.MOUSE_CLICKED)){
-                boton.switchGrupo();
                 actualizarColor();
             }
         });

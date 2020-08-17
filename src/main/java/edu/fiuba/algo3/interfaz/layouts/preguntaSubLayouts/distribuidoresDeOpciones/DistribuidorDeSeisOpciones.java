@@ -7,19 +7,21 @@ import java.util.ArrayList;
 
 public class DistribuidorDeSeisOpciones extends DistribuidorDeOpcionesChicas {
 
-    public DistribuidorDeSeisOpciones(ArrayList<String> opciones, GestorDeJuego gestor, EnunciadosOpciones opcionesRespuesta) {
+    public DistribuidorDeSeisOpciones(ArrayList<String> opciones, GestorDeJuego gestor,
+                                      EnunciadosOpciones opcionesRespuesta) {
 
+        ListaOpcionesOrdenables listaOrdenable = new ListaOpcionesOrdenables(opcionesRespuesta);
         this.agregarOpcion(opciones.get(0), -400, -50,
-                Color.RED, gestor, opcionesRespuesta);
+                Color.RED, gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(1), 400, -50,
-                Color.BLUE, gestor, opcionesRespuesta);
+                Color.BLUE, gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(2), -400, 60,
-                Color.GOLD, gestor, opcionesRespuesta);
+                Color.GOLD, gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(3), 400, 60,
-                Color.GREEN, gestor, opcionesRespuesta);
+                Color.GREEN, gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(4), 0, 60,
-                Color.ORANGE, gestor, opcionesRespuesta);
+                Color.ORANGE, gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(5), 0, -50,
-                Color.BLUEVIOLET, gestor, opcionesRespuesta);
+                Color.BLUEVIOLET, gestor, opcionesRespuesta, listaOrdenable);
     }
 }

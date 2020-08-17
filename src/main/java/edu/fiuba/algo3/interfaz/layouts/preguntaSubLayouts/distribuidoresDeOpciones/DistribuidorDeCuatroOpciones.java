@@ -2,7 +2,7 @@ package edu.fiuba.algo3.interfaz.layouts.preguntaSubLayouts.distribuidoresDeOpci
 
 import edu.fiuba.algo3.controladores.BotonAgrupableHandler;
 import edu.fiuba.algo3.controladores.BotonOrdenableHandler;
-import edu.fiuba.algo3.controladores.BotonSeleccionableHandler;
+import edu.fiuba.algo3.controladores.BotonOpcionSeleccionableHandler;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.*;
 import edu.fiuba.algo3.modelo.GestorDeJuego;
 import edu.fiuba.algo3.modelo.pregunta.pregunta.EnunciadosOpciones;
@@ -15,20 +15,23 @@ import java.util.ArrayList;
 
 public class DistribuidorDeCuatroOpciones extends StackPane {
 
-    public DistribuidorDeCuatroOpciones(ArrayList<String> opciones, GestorDeJuego gestor, EnunciadosOpciones opcionesRespuesta) {
+    public DistribuidorDeCuatroOpciones(ArrayList<String> opciones, GestorDeJuego gestor,
+                                        EnunciadosOpciones opcionesRespuesta) {
 
+        ListaOpcionesOrdenables listaOrdenable = new ListaOpcionesOrdenables(opcionesRespuesta);
         this.agregarOpcion(opciones.get(0), -300, -50,
-                Color.RED, gestor, opcionesRespuesta);
+                Color.RED, gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(1), 300, -50,
-                Color.BLUE, gestor, opcionesRespuesta);
+                Color.BLUE, gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(2), -300, 60,
-                Color.GOLD, gestor, opcionesRespuesta);
+                Color.GOLD, gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(3), 300, 60,
-                Color.GREEN, gestor, opcionesRespuesta);
+                Color.GREEN, gestor, opcionesRespuesta, listaOrdenable);
     }
 
     private void agregarOpcion(String enunciado, Integer desplazamientoEnX, Integer desplazamientoEnY,
-                               Color color, GestorDeJuego gestor, EnunciadosOpciones opcionesRespuesta) {
+                               Color color, GestorDeJuego gestor, EnunciadosOpciones opcionesRespuesta,
+                               ListaOpcionesOrdenables listaOrdenables) {
 
         Button opcion;
         if (gestor.esTipoDeRespuestaComparable(RespuestaGroupChoice.class)) {
@@ -38,11 +41,12 @@ public class DistribuidorDeCuatroOpciones extends StackPane {
         } else if (gestor.esTipoDeRespuestaComparable(RespuestaOrderedChoice.class)) {
             opcion = new BotonOrdenableChicoLargo(enunciado, desplazamientoEnX, desplazamientoEnY, color);
             opcionesRespuesta.agregarEnunciadoNoOrdenado(enunciado);
+            listaOrdenables.add((BotonOrdenable) opcion);
             opcion.setOnAction(new BotonOrdenableHandler((BotonOrdenable)opcion, opcionesRespuesta));
         } else {
             opcion = new BotonOpcionSeleccionableChicoLargo(enunciado, desplazamientoEnX, desplazamientoEnY, color);
             opcionesRespuesta.agregarEnunciadoNoElegido(enunciado);
-            opcion.setOnAction(new BotonSeleccionableHandler((BotonOpcionSeleccionable) opcion, opcionesRespuesta));
+            opcion.setOnAction(new BotonOpcionSeleccionableHandler((BotonOpcionSeleccionable) opcion, opcionesRespuesta));
         }
         this.getChildren().add(opcion);
     }

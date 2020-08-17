@@ -7,13 +7,13 @@ import javafx.event.EventHandler;
 
 public class BotonOrdenableHandler implements EventHandler<ActionEvent> {
 
-    private EnunciadosOpciones opcionesRespuesta;
     private BotonOrdenable boton;
+    private EnunciadosOpciones opcionesRespuesta;
 
     public BotonOrdenableHandler(BotonOrdenable botonAgrupable, EnunciadosOpciones enunciadosOpciones) {
 
-        opcionesRespuesta = enunciadosOpciones;
         boton = botonAgrupable;
+        opcionesRespuesta = enunciadosOpciones;
     }
 
     @Override
@@ -22,9 +22,12 @@ public class BotonOrdenableHandler implements EventHandler<ActionEvent> {
         if (boton.getPosicion() == null) {
             opcionesRespuesta.agregarEnunciadoEnOrden(boton.getText());
             boton.setPosicion(opcionesRespuesta.obtenerOrden());
+            boton.setText(boton.getText() + " (" + boton.getPosicion() + ")");
         } else {
-            opcionesRespuesta.eliminarEnunciadoEnOrden(boton.getText());
+            boton.setText(boton.getText().substring(0, boton.getText().length() - 4));
             boton.setPosicion(null);
+            opcionesRespuesta.eliminarEnunciadoEnOrden(boton.getText());
         }
+        System.out.println(boton.getPosicion());
     }
 }

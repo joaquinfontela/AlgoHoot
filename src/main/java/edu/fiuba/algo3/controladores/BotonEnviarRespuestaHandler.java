@@ -20,10 +20,8 @@ public class BotonEnviarRespuestaHandler extends BotonTerminarTurnoHandler {
     @Override
     public void handle(ActionEvent event) {
 
-        Respuesta respuesta = gestor.crearRespuestaComparable();
         try {
-            System.out.println(layoutActual.obtenerOpcionesRespuestaJugador().enunciadosGrupoB());
-            System.out.println(layoutActual.obtenerOpcionesRespuestaJugador().enunciadosGrupoA());
+            Respuesta respuesta = gestor.crearRespuestaComparable();
             respuesta.rellenar(layoutActual.obtenerOpcionesRespuestaJugador());
             gestor.terminarTurno(respuesta);
             layoutActual.detenerTemporizador();
