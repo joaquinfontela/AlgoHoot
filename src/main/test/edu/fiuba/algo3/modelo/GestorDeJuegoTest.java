@@ -16,7 +16,7 @@ public class GestorDeJuegoTest {
     private ArrayList<Jugador> jugadores;
 
     @BeforeEach
-    public void init() {
+    public void init() throws Exception {
 
         jugadores = new ArrayList<>();
         jugadores.add(new Jugador("Daniela"));

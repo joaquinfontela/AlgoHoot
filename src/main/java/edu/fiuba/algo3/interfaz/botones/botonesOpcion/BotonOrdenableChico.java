@@ -8,6 +8,6 @@ public class BotonOrdenableChico extends BotonOrdenable {
     public BotonOrdenableChico(String enunciado, double posX, double posY, Color color) {
 
         super(enunciado, posX, posY);
-        this.setSkin(new EstilosBotonOrdenable(this, color,520,50));
+        this.setSkin(new EstilosBotonOrdenable(this, color,375,90));
     }
 }

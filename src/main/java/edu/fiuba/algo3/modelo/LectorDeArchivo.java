@@ -36,7 +36,7 @@ public class LectorDeArchivo {
         preguntasEnFormatoJson = datosArchivoJson.getAsJsonArray("preguntas");
     }
 
-    public ArrayList<InformacionPregunta> obtenerListaDeInformacionDePreguntas() {
+    public ArrayList<InformacionPregunta> obtenerListaDeInformacionDePreguntas() throws Exception {
 
         informacionPreguntas = new ArrayList<>();
         for (JsonElement preguntaEnFormatoJson : preguntasEnFormatoJson){
@@ -47,16 +47,19 @@ public class LectorDeArchivo {
         return informacionPreguntas;
     }
 
-    private void agregarInformacionDePreguntaALaLista(JsonElement preguntaEnFormatoJson) {
+    private void agregarInformacionDePreguntaALaLista(JsonElement preguntaEnFormatoJson) throws Exception {
 
         EnunciadosOpciones enunciadosOpciones = obtenerEnunciadosOpcionesDeLaPregunta(preguntaEnFormatoJson);
         int modalidadId = preguntaEnFormatoJson.getAsJsonObject().get("modalidad id").getAsInt();
         int tipoPreguntaId = preguntaEnFormatoJson.getAsJsonObject().get("tipo pregunta id").getAsInt();
         String enunciadoPregunta = preguntaEnFormatoJson.getAsJsonObject().get("enunciado").getAsString();
 
+        try {
             informacionPreguntas.add(new InformacionPregunta(modalidadId, tipoPreguntaId,
                     enunciadoPregunta, enunciadosOpciones));
-
+        } catch(Exception exception) {
+            throw new Exception("Hubo problemas al cargar las preguntas");
+        }
     }
 
     private EnunciadosOpciones obtenerEnunciadosOpcionesDeLaPregunta(JsonElement preguntaEnFormatoJson) {
