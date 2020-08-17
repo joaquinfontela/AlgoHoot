@@ -20,18 +20,18 @@ public class BotonEnviarRespuestaHandler extends BotonTerminarTurnoHandler {
     @Override
     public void handle(ActionEvent event) {
 
-        try {
-            Respuesta respuesta = gestor.crearRespuestaComparable();
-            respuesta.rellenar(layoutActual.obtenerOpcionesRespuestaJugador());
-            this.verificarBonificaciones();
-            gestor.terminarTurno(respuesta);
-            layoutActual.detenerTemporizador();
-            this.cambiarEscena();
-        } catch (Exception exception) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText(exception.getMessage());
-            alert.show();
-        }
+            try {
+                Respuesta respuesta = gestor.crearRespuestaComparable();
+                respuesta.rellenar(layoutActual.obtenerOpcionesRespuestaJugador());
+                this.verificarBonificaciones();
+                gestor.terminarTurno(respuesta);
+                layoutActual.detenerTemporizador();
+                this.cambiarEscena();
+            } catch (Exception exception) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText(exception.getMessage());
+                alert.show();
+            }
     }
 
     private void verificarBonificaciones() throws Exception {
@@ -45,4 +45,3 @@ public class BotonEnviarRespuestaHandler extends BotonTerminarTurnoHandler {
         }
     }
 }
-
