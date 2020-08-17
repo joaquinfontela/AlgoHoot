@@ -72,10 +72,14 @@ public class EnunciadosOpciones {
 
     public void eliminarEnunciadoEnOrden(String enunciado) {
 
-        int contador = 0;
-        while (!opciones.get(contador).contains(enunciado) && contador < opciones.size()) contador++;
-        orden = contador;
-        for (int i = contador; i < opciones.size(); i++) this.agregarEnunciado(enunciado, -1, i);
+        for (Integer key : opciones.keySet()) {
+            if (opciones.get(key).contains(enunciado)) orden = key;
+        }
+        for (int i = orden; i < opciones.keySet().size()-1; i++){
+            if(!opciones.get(i).isEmpty()) {
+                this.agregarEnunciado(opciones.get(i).get(0), -1, i);
+            }
+        }
     }
 
     public ArrayList<String> enunciadosCorrectos() throws Exception {
@@ -108,17 +112,11 @@ public class EnunciadosOpciones {
 
     public ArrayList<String> enunciadosOrdenados() throws Exception {
 
-        System.out.println(opciones.get(-1));
-        System.out.println(opciones.get(0));
-        System.out.println(opciones.get(1));
-        System.out.println(opciones.get(2));
-        System.out.println(opciones.get(3));
-        System.out.println(opciones.get(4));
         if (opciones.get(-1) != null && !opciones.get(-1).isEmpty())
             throw new Exception("No has ordenado todas las opciones");
         ArrayList<String> enunciadosOrdenados = new ArrayList<>();
-        for (int i = 0; i < opciones.size(); i++) {
-            enunciadosOrdenados.add(opciones.get(i).get(0));
+        for (Integer key : opciones.keySet()) {
+            if (key != -1) enunciadosOrdenados.add(opciones.get(key).get(0));
         }
         return enunciadosOrdenados;
     }

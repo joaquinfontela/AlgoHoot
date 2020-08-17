@@ -4,12 +4,12 @@ import javafx.scene.control.Button;
 
 public abstract class BotonOrdenable extends Button {
 
-    private Integer posicion;
-    private Integer posicionAnterior;
+    private int posicion;
+    private int posicionAnterior;
 
     public BotonOrdenable(String enunciado, double posX, double posY) {
 
-        posicion = null;
+        posicion = -1;
         this.setText(enunciado);
         this.setTranslateX(posX);
         this.setTranslateY(posY);
@@ -21,11 +21,21 @@ public abstract class BotonOrdenable extends Button {
         posicion = pos;
     }
 
-    public Integer getPosicion() {
+    public void establecerNoOrdenado() {
+
+        posicionAnterior = posicion;
+        posicion = -1;
+    }
+
+    public boolean estaOrdenado() {
+        return posicion != -1;
+    }
+
+    public int getPosicion() {
         return posicion;
     }
 
-    public Integer getPosicionAnterior() {
+    public int getPosicionAnterior() {
         return posicionAnterior;
     }
 }

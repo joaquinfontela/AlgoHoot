@@ -20,23 +20,16 @@ public class ListaOpcionesOrdenables extends ArrayList<BotonOrdenable> {
 
         boolean valorADevolver = super.add(boton);
         boton.setOnMouseClicked(e -> {
-
-                for (BotonOrdenable b : this){
-                    if (!b.equals(boton) && b.getPosicion() != null) {
-                        Integer posicion;
-                        if(boton.getPosicion() != null){
-                            posicion = boton.getPosicion();
-                        } else {
-                            posicion = boton.getPosicionAnterior();
-                        }
-                        if (b.getPosicion() > posicion) {
+            for (BotonOrdenable b : this){
+                if (!b.equals(boton)) {
+                    if(!boton.estaOrdenado()){
+                        if (b.getPosicion() > boton.getPosicionAnterior()) {
                             b.setText(b.getText().substring(0, b.getText().length() - 4));
-                            b.setPosicion(null);
-                            opcionesRespuesta.eliminarEnunciadoEnOrden(b.getText());
+                            b.establecerNoOrdenado();
                         }
                     }
                 }
-
+            }
         });
         return valorADevolver;
     }

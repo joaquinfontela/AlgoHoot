@@ -19,15 +19,16 @@ public class BotonOrdenableHandler implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent event) {
 
-        if (boton.getPosicion() == null) {
+        if (!boton.estaOrdenado()) {
             opcionesRespuesta.agregarEnunciadoEnOrden(boton.getText());
             boton.setPosicion(opcionesRespuesta.obtenerOrden());
             boton.setText(boton.getText() + " (" + boton.getPosicion() + ")");
         } else {
             boton.setText(boton.getText().substring(0, boton.getText().length() - 4));
-            boton.setPosicion(null);
+            boton.establecerNoOrdenado();
             opcionesRespuesta.eliminarEnunciadoEnOrden(boton.getText());
         }
         System.out.println(boton.getPosicion());
+        System.out.println(boton.getPosicionAnterior());
     }
 }
