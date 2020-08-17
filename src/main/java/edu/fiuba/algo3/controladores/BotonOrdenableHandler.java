@@ -28,7 +28,5 @@ public class BotonOrdenableHandler implements EventHandler<ActionEvent> {
             boton.establecerNoOrdenado();
             opcionesRespuesta.eliminarEnunciadoEnOrden(boton.getText());
         }
-        System.out.println(boton.getPosicion());
-        System.out.println(boton.getPosicionAnterior());
     }
 }
