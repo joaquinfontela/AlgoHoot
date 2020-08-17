@@ -10,7 +10,7 @@ public class EstilosBotonSeAcaboElTiempo extends EstilosBotonComun {
         super(boton);
         boton.setText("Siguiente turno");
         boton.setTextFill(Color.BLACK);
-        boton.setPrefSize(600, 50);
+        boton.setPrefSize(500, 50);
         boton.setStyle("-fx-background-color: transparent; -fx-font-size: 50px; -fx-border-color: black;" +
                 "-fx-border-radius: 10px; -fx-border-width: 10px");
     }

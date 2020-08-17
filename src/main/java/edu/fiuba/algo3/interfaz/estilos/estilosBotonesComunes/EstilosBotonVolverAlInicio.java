@@ -14,4 +14,3 @@ public class EstilosBotonVolverAlInicio extends EstilosBotonComun {
                 "-fx-border-radius: 40px; -fx-border-width: 5px");
     }
 }
-

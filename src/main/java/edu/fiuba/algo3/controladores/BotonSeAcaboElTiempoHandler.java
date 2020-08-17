@@ -2,6 +2,7 @@ package edu.fiuba.algo3.controladores;
 
 import edu.fiuba.algo3.modelo.GestorDeJuego;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 public class BotonSeAcaboElTiempoHandler extends BotonTerminarTurnoHandler {
@@ -18,7 +19,9 @@ public class BotonSeAcaboElTiempoHandler extends BotonTerminarTurnoHandler {
             gestor.avanzarSiguienteTurno();
             this.cambiarEscena();
         } catch(Exception exception) {
-            System.out.println(exception.getMessage());
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText(exception.getMessage());
+            alert.show();
         }
     }
 }
