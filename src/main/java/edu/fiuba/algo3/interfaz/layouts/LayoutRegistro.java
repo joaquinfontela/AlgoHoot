@@ -13,7 +13,6 @@ public class LayoutRegistro extends BorderPane{
 
     private LayoutRegistroJugadores layoutRegistroJugadores;
     private LayoutSeleccionRondas layoutSeleccionRondas;
-    private BotonPreturno botonComenzar;
 
     public LayoutRegistro(Stage stage) {
 
@@ -25,7 +24,7 @@ public class LayoutRegistro extends BorderPane{
         layoutRegistroJugadores = new LayoutRegistroJugadores();
         this.setTop(layoutRegistroJugadores);
 
-        botonComenzar = new BotonPreturno();
+        BotonPreturno botonComenzar = new BotonPreturno();
         botonComenzar.setTranslateX(360.0);
         botonComenzar.setTranslateY(-30.0);
         botonComenzar.setOnAction(new BotonPreturnoHandler(stage,this));

@@ -10,8 +10,9 @@ public class GeneradorLayoutOpciones {
 
     StackPane layout;
 
-    public StackPane generarLayout(ArrayList<String> opciones, GestorDeJuego gestor, EnunciadosOpciones opcionesRespuesta) {
+    public StackPane generarLayout(GestorDeJuego gestor, EnunciadosOpciones opcionesRespuesta) {
 
+        ArrayList<String> opciones = gestor.obtenerEnunciadosOpcionesActuales();
         if (opciones.size() == 2){
             layout = new DistribuidorDeDosOpciones(opciones, gestor, opcionesRespuesta);
         } else if (opciones.size() == 3) {
