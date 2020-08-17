@@ -14,7 +14,7 @@ public class DistribuidorDeDosOpciones extends DistribuidorDeOpcionesGrandes {
     public DistribuidorDeDosOpciones(ArrayList<String> opciones, GestorDeJuego gestor, EnunciadosOpciones opcionesRespuesta) {
 
         if(gestor.esTipoDeRespuestaComparable(RespuestaVerdaderoFalso.class)) {
-            ListaOpcionesVerdaderoFalso lista = new ListaOpcionesVerdaderoFalso();
+            ListaOpcionesVerdaderoFalso lista = new ListaOpcionesVerdaderoFalso(opcionesRespuesta);
             this.agregarOpcionVerdaderoFalso(opciones.get(0), -245, Color.RED,
                     opcionesRespuesta, lista);
             this.agregarOpcionVerdaderoFalso(opciones.get(1), 245, Color.BLUE,
@@ -35,7 +35,7 @@ public class DistribuidorDeDosOpciones extends DistribuidorDeOpcionesGrandes {
                 5, color);
         opcionesRespuesta.agregarEnunciadoNoElegido(enunciado);
         opcion.setOnAction(new BotonSeleccionableHandler(opcion, opcionesRespuesta));
-        lista.add(opcion, opcionesRespuesta);
+        lista.add(opcion);
         this.getChildren().add(opcion);
     }
 }

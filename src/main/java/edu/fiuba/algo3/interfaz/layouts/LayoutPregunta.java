@@ -14,7 +14,7 @@ public class LayoutPregunta extends BorderPane {
 
     protected GeneradorLayoutOpciones generadorLayoutOpciones;
     private LayoutIzquierdoPregunta layoutIzquierdo;
-    EnunciadosOpciones opcionesRespuesta;
+    private EnunciadosOpciones opcionesRespuesta;
 
     public LayoutPregunta(Stage stage, GestorDeJuego gestor) {
 

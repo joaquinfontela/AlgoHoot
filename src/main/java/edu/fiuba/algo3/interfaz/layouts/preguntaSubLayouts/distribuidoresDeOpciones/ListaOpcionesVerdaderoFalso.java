@@ -7,12 +7,16 @@ import java.util.ArrayList;
 
 public class ListaOpcionesVerdaderoFalso extends ArrayList<BotonOpcionSeleccionable> {
 
-    public ListaOpcionesVerdaderoFalso() {
+    private EnunciadosOpciones opcionesRespuesta;
+
+    public ListaOpcionesVerdaderoFalso(EnunciadosOpciones enunciadosOpciones) {
 
         super();
+        opcionesRespuesta = enunciadosOpciones;
     }
 
-    public boolean add(BotonOpcionSeleccionable boton, EnunciadosOpciones opcionesRespuesta) {
+    @Override
+    public boolean add(BotonOpcionSeleccionable boton) {
 
         boolean valorADevolver = super.add(boton);
         boton.setOnMouseClicked(e -> {
