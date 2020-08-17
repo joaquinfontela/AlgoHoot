@@ -9,6 +9,5 @@ public class BotonEnviarRespuesta extends Button {
 
         this.setTranslateY(160.0);
         this.setSkin(new EstilosBotonEnviarRespuesta(this));
-
     }
 }

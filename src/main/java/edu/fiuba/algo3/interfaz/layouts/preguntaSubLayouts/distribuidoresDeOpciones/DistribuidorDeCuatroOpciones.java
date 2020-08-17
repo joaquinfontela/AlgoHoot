@@ -3,7 +3,12 @@ package edu.fiuba.algo3.interfaz.layouts.preguntaSubLayouts.distribuidoresDeOpci
 import edu.fiuba.algo3.controladores.BotonAgrupableHandler;
 import edu.fiuba.algo3.controladores.BotonOrdenableHandler;
 import edu.fiuba.algo3.controladores.BotonOpcionSeleccionableHandler;
-import edu.fiuba.algo3.interfaz.botones.botonesOpcion.*;
+import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonAgrupable.BotonAgrupable;
+import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonAgrupable.BotonAgrupableChico;
+import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonOrdenable.BotonOrdenable;
+import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonOrdenable.BotonOrdenableChicoLargo;
+import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonSeleccionable.BotonOpcionSeleccionable;
+import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonSeleccionable.BotonOpcionSeleccionableChicoLargo;
 import edu.fiuba.algo3.modelo.GestorDeJuego;
 import edu.fiuba.algo3.modelo.pregunta.pregunta.EnunciadosOpciones;
 import edu.fiuba.algo3.modelo.pregunta.respuesta.RespuestaGroupChoice;
@@ -24,7 +29,7 @@ public class DistribuidorDeCuatroOpciones extends StackPane {
         this.agregarOpcion(opciones.get(1), 300, -50,
                 Color.BLUE, gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(2), -300, 60,
-                Color.GOLD, gestor, opcionesRespuesta, listaOrdenable);
+                Color.web("eacc0a"), gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(3), 300, 60,
                 Color.GREEN, gestor, opcionesRespuesta, listaOrdenable);
     }

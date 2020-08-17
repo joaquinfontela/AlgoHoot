@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.interfaz.botones.botonesOpcion;
+package edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonOrdenable;
 
 import javafx.scene.control.Button;
 
@@ -21,6 +21,10 @@ public abstract class BotonOrdenable extends Button {
         posicion = pos;
     }
 
+    public int getPosicion() {
+        return posicion;
+    }
+
     public void establecerNoOrdenado() {
 
         posicionAnterior = posicion;
@@ -29,10 +33,6 @@ public abstract class BotonOrdenable extends Button {
 
     public boolean estaOrdenado() {
         return posicion != -1;
-    }
-
-    public int getPosicion() {
-        return posicion;
     }
 
     public int getPosicionAnterior() {

@@ -1,13 +1,15 @@
 package edu.fiuba.algo3.interfaz.layouts;
 
 import edu.fiuba.algo3.controladores.BotonVolverAlMenuHandler;
-import edu.fiuba.algo3.interfaz.botones.botonesComunes.BotonVolverAlMenu;
+import edu.fiuba.algo3.interfaz.botones.botonesComunes.BotonVolverAlInicio;
 import edu.fiuba.algo3.interfaz.layouts.puntajesSubLayouts.LayoutPuntajeJugador;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class LayoutPuntajeFinal extends StackPane {
@@ -22,7 +24,14 @@ public class LayoutPuntajeFinal extends StackPane {
         this.crearLayoutParteJugadorArriba(jugadorArriba, jugadorAbajo);
         this.crearLayoutParteJugadorAbajo(jugadorArriba,jugadorAbajo);
 
-        BotonVolverAlMenu botonContinuar = new BotonVolverAlMenu();
+        Label label = new Label();
+        label.setText("Resultados");
+        label.setFont(new Font("FreeSans", 110));
+        label.setTextFill(Color.web("a600ff"));
+        label.setTranslateY(-300.0);
+        this.getChildren().add(label);
+
+        BotonVolverAlInicio botonContinuar = new BotonVolverAlInicio();
         botonContinuar.setTranslateY(250);
         botonContinuar.setOnAction(new BotonVolverAlMenuHandler(stage));
         this.getChildren().add(botonContinuar);
@@ -42,13 +51,13 @@ public class LayoutPuntajeFinal extends StackPane {
         }
 
         LayoutPuntajeJugador layoutPuntajeArriba = new LayoutPuntajeJugador(jugadorArriba, color);
-        layoutPuntajeArriba.setTranslateY(-170.0);
+        layoutPuntajeArriba.setTranslateY(-150.0);
         this.getChildren().add(layoutPuntajeArriba);
 
         imageView.setFitHeight(100);
         imageView.setFitWidth(100);
         imageView.setTranslateX(150);
-        imageView.setTranslateY(-170);
+        imageView.setTranslateY(-150);
         this.getChildren().add(imageView);
     }
 

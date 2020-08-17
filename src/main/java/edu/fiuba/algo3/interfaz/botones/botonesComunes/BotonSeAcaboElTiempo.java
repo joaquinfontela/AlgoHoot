@@ -6,7 +6,6 @@ import javafx.scene.control.Button;
 public class BotonSeAcaboElTiempo extends Button {
 
     public BotonSeAcaboElTiempo() {
-
         this.setSkin(new EstilosBotonSeAcaboElTiempo(this));
     }
 }

@@ -1,11 +1,11 @@
-package edu.fiuba.algo3.interfaz.estilos;
+package edu.fiuba.algo3.interfaz.estilos.estilosBotonesComunes;
 
 import javafx.animation.FadeTransition;
 import javafx.scene.control.Button;
 import javafx.scene.control.skin.ButtonSkin;
 import javafx.util.Duration;
 
-public class EstilosBotonComun extends ButtonSkin {
+public abstract class EstilosBotonComun extends ButtonSkin {
 
     protected Button boton;
 

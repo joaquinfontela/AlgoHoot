@@ -6,8 +6,6 @@ import javafx.scene.control.Button;
 public class BotonPreturno extends Button {
 
     public BotonPreturno() {
-
         this.setSkin(new EstilosBotonPreturno(this));
-
     }
 }

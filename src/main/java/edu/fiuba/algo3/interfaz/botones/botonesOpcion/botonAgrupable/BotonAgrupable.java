@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.interfaz.botones.botonesOpcion;
+package edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonAgrupable;
 
 import javafx.scene.control.Button;
 

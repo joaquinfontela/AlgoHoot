@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.interfaz.botones.botonesOpcion;
+package edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonSeleccionable;
 
 import edu.fiuba.algo3.interfaz.botones.BotonSeleccionable;
 

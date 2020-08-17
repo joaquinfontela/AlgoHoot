@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.interfaz.estilos.estilosBotonOpcion;
 
-import edu.fiuba.algo3.interfaz.botones.botonesOpcion.BotonAgrupable;
+import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonAgrupable.BotonAgrupable;
 import javafx.animation.FadeTransition;
 import javafx.geometry.Insets;
 import javafx.scene.control.skin.ButtonSkin;

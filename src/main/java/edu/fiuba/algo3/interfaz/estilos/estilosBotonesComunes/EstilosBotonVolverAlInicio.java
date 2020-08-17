@@ -1,14 +1,13 @@
 package edu.fiuba.algo3.interfaz.estilos.estilosBotonesComunes;
 
-import edu.fiuba.algo3.interfaz.estilos.EstilosBotonComun;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 
-public class EstilosBotonVolverAlMenu extends EstilosBotonComun {
+public class EstilosBotonVolverAlInicio extends EstilosBotonComun {
 
-    public EstilosBotonVolverAlMenu(Button unBoton) {
+    public EstilosBotonVolverAlInicio(Button unBoton) {
         super(unBoton);
-        boton.setText("Volver al Menu!");
+        boton.setText("Volver al Inicio!");
         boton.setTextFill(Color.WHITE);
         boton.setPrefSize(500, 100);
         boton.setStyle("-fx-background-color: black; -fx-font-size: 50px; -fx-border-color: black;" +

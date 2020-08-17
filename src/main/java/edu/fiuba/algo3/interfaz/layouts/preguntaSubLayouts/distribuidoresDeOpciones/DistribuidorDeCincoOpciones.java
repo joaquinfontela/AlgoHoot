@@ -16,7 +16,7 @@ public class DistribuidorDeCincoOpciones extends DistribuidorDeOpcionesChicas {
         this.agregarOpcion(opciones.get(1), 400,-30,
                 Color.BLUE, gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(2), -400,80,
-                Color.GOLD, gestor, opcionesRespuesta, listaOrdenable);
+                Color.web("eacc0a"), gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(3), 400,80,
                 Color.GREEN, gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(4), 0,-30,

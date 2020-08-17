@@ -14,7 +14,7 @@ public class DistribuidorDeTresOpciones extends DistribuidorDeOpcionesGrandes {
         this.agregarOpcion(opciones.get(0), -395, 5,
                 Color.RED, gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(1), 395, 5,
-                Color.GOLD, gestor, opcionesRespuesta, listaOrdenable);
+                Color.web("eacc0a"), gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(2), 0, 5,
                 Color.BLUE, gestor, opcionesRespuesta, listaOrdenable);
     }

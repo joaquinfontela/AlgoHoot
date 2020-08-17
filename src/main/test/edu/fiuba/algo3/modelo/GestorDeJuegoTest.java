@@ -22,7 +22,7 @@ public class GestorDeJuegoTest {
         jugadores.add(new Jugador("Daniela"));
         jugadores.add(new Jugador("Roberto"));
         LectorDeArchivo lectorDeArchivo = new LectorDeArchivo();
-        ArrayList<InformacionPregunta> infoArchivo = lectorDeArchivo.obtenerListaDeInformacionDePreguntas();
+        ArrayList<InformacionPregunta> infoArchivo = lectorDeArchivo.obtenerListaDeInformacionDePreguntas(3);
         gestor = new GestorDeJuego(infoArchivo, jugadores, 3);
     }
 

@@ -6,7 +6,6 @@ import javafx.scene.control.Button;
 public class BotonPuntajesParciales extends Button {
 
     public BotonPuntajesParciales() {
-
         this.setSkin(new EstilosBotonPuntajesParciales(this));
     }
 }

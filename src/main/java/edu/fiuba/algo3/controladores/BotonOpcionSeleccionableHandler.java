@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.controladores;
 
-import edu.fiuba.algo3.interfaz.botones.botonesOpcion.BotonOpcionSeleccionable;
+import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonSeleccionable.BotonOpcionSeleccionable;
 import edu.fiuba.algo3.modelo.pregunta.pregunta.EnunciadosOpciones;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
