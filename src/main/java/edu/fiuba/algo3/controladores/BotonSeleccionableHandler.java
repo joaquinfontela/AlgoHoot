@@ -20,6 +20,7 @@ public class BotonSeleccionableHandler implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent event) {
 
+        boton.switchSeleccionado();
         if (boton.fueSeleccionado()) {
             opcionesRespuesta.agregarEnunciadoElegido(boton.getText());
         } else {

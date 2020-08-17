@@ -22,6 +22,8 @@ public class BotonEnviarRespuestaHandler extends BotonTerminarTurnoHandler {
 
 
         Respuesta respuesta = gestor.crearRespuestaComparable();
+        System.out.println(layoutActual.obtenerOpcionesRespuestaJugador().enunciadosCorrectos());
+        System.out.println(layoutActual.obtenerOpcionesRespuestaJugador().enunciadosIncorrectos());
         respuesta.rellenar(layoutActual.obtenerOpcionesRespuestaJugador());
         try {
             gestor.terminarTurno(respuesta);

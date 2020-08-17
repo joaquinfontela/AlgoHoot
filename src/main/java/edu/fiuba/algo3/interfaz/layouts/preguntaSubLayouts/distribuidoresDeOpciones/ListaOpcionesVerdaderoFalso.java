@@ -22,12 +22,11 @@ public class ListaOpcionesVerdaderoFalso extends ArrayList<BotonOpcionSelecciona
         boton.setOnMouseClicked(e -> {
             for (BotonOpcionSeleccionable b : this){
                 if (!b.equals(boton) && b.fueSeleccionado()) {
-                    opcionesRespuesta.agregarEnunciadoNoElegido(boton.getText());
+                    opcionesRespuesta.agregarEnunciadoNoElegido(b.getText());
                     b.switchSeleccionado();
                     actualizarOpacidad(b);
                 }
             }
-            boton.switchSeleccionado();
             actualizarOpacidad(boton);
         });
         return valorADevolver;

@@ -48,7 +48,6 @@ public class EstilosBotonSeleccionable extends ButtonSkin {
         boton.setOnMouseClicked(e -> {
 
             if (e.getEventType().equals(MouseEvent.MOUSE_CLICKED)){
-                boton.switchSeleccionado();
                 actualizarOpacidad();
             }
         });

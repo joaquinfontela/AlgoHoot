@@ -50,10 +50,10 @@ public class RespuestaGroupChoice extends Respuesta {
     }
 
     @Override
-    public void rellenar(EnunciadosOpciones enunciadosOpciones) {
+    public void rellenar(EnunciadosOpciones opcionesParaAgregar) {
 
-        opcionesGrupoA.addAll(enunciadosOpciones.enunciadosGrupoA());
-        opcionesGrupoB.addAll(enunciadosOpciones.enunciadosGrupoB());
+        opcionesGrupoA.addAll(opcionesParaAgregar.enunciadosGrupoA());
+        opcionesGrupoB.addAll(opcionesParaAgregar.enunciadosGrupoB());
     }
 
     @Override
