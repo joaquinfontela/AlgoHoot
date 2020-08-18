@@ -15,6 +15,7 @@ public class BotonOpcionSeleccionableHandler implements EventHandler<ActionEvent
 
         opcionesRespuesta = enunciadosOpciones;
         boton = botonSeleccionable;
+        opcionesRespuesta.agregarEnunciadoNoElegido(boton.getText());
     }
 
     @Override

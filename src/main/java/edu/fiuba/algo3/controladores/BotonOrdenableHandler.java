@@ -14,6 +14,7 @@ public class BotonOrdenableHandler implements EventHandler<ActionEvent> {
 
         boton = botonAgrupable;
         opcionesRespuesta = enunciadosOpciones;
+        opcionesRespuesta.agregarEnunciadoNoOrdenado(boton.getText());
     }
 
     @Override

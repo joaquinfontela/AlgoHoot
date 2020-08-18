@@ -26,16 +26,13 @@ public abstract class DistribuidorDeOpcionesGrandes extends StackPane {
         Button opcion;
         if (gestor.esTipoDeRespuestaComparable(RespuestaGroupChoice.class)) {
             opcion = new BotonAgrupableGrande(enunciado, desplazamientoEnX, desplazamientoEnY);
-            opcionesRespuesta.agregarEnunciadoGrupoA(enunciado);
             opcion.setOnAction(new BotonAgrupableHandler((BotonAgrupable)opcion, opcionesRespuesta));
         } else if (gestor.esTipoDeRespuestaComparable(RespuestaOrderedChoice.class)) {
             opcion = new BotonOrdenableGrande(enunciado, desplazamientoEnX, desplazamientoEnY, color);
-            opcionesRespuesta.agregarEnunciadoNoOrdenado(enunciado);
             listaOrdenables.add((BotonOrdenable) opcion);
             opcion.setOnAction(new BotonOrdenableHandler((BotonOrdenable)opcion, opcionesRespuesta));
         } else {
             opcion = new BotonOpcionSeleccionableGrande(enunciado, desplazamientoEnX, desplazamientoEnY, color);
-            opcionesRespuesta.agregarEnunciadoNoElegido(enunciado);
             opcion.setOnAction(new BotonOpcionSeleccionableHandler((BotonOpcionSeleccionable) opcion, opcionesRespuesta));
         }
         this.getChildren().add(opcion);

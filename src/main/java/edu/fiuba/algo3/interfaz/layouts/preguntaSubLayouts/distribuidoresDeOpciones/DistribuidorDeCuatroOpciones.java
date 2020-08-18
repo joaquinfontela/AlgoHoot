@@ -17,6 +17,8 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Vector;
 
 public class DistribuidorDeCuatroOpciones extends StackPane {
 
@@ -41,16 +43,13 @@ public class DistribuidorDeCuatroOpciones extends StackPane {
         Button opcion;
         if (gestor.esTipoDeRespuestaComparable(RespuestaGroupChoice.class)) {
             opcion = new BotonAgrupableChico(enunciado, desplazamientoEnX, desplazamientoEnY);
-            opcionesRespuesta.agregarEnunciadoGrupoA(enunciado);
             opcion.setOnAction(new BotonAgrupableHandler((BotonAgrupable)opcion, opcionesRespuesta));
         } else if (gestor.esTipoDeRespuestaComparable(RespuestaOrderedChoice.class)) {
             opcion = new BotonOrdenableChicoLargo(enunciado, desplazamientoEnX, desplazamientoEnY, color);
-            opcionesRespuesta.agregarEnunciadoNoOrdenado(enunciado);
             listaOrdenables.add((BotonOrdenable) opcion);
             opcion.setOnAction(new BotonOrdenableHandler((BotonOrdenable)opcion, opcionesRespuesta));
         } else {
             opcion = new BotonOpcionSeleccionableChicoLargo(enunciado, desplazamientoEnX, desplazamientoEnY, color);
-            opcionesRespuesta.agregarEnunciadoNoElegido(enunciado);
             opcion.setOnAction(new BotonOpcionSeleccionableHandler((BotonOpcionSeleccionable) opcion, opcionesRespuesta));
         }
         this.getChildren().add(opcion);

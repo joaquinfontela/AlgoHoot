@@ -14,6 +14,7 @@ public class BotonAgrupableHandler implements EventHandler<ActionEvent> {
 
         opcionesRespuesta = enunciadosOpciones;
         boton = botonAgrupable;
+        opcionesRespuesta.agregarEnunciadoGrupoA(boton.getText());
     }
 
     @Override
