@@ -27,7 +27,6 @@ public class ListaOpcionesVerdaderoFalso extends ArrayList<BotonOpcionSelecciona
                     actualizarOpacidad(b);
                 }
             }
-            actualizarOpacidad(boton);
         });
         return valorADevolver;
     }

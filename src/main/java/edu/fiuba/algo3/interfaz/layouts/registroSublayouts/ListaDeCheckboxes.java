@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public class ListaDeCheckboxes extends ArrayList<CheckBox> {
 
     public ListaDeCheckboxes() {
-
         super();
     }
 
