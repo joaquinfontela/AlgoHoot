@@ -8,13 +8,10 @@ public abstract class BotonAgrupable extends Button {
 
     public BotonAgrupable(String enunciado, double posX, double posY) {
 
+        grupo = 'A';
         this.setText(enunciado);
         this.setTranslateX(posX);
         this.setTranslateY(posY);
-    }
-
-    public BotonAgrupable() {
-        grupo = 'A';
     }
 
     public void switchGrupo() {

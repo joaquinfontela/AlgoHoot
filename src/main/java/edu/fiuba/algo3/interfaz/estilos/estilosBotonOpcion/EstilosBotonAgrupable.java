@@ -65,13 +65,13 @@ public class EstilosBotonAgrupable extends ButtonSkin {
     private void actualizarColor() {
 
         if (boton.esGrupoA()) {
-            boton.setTextFill(Color.BLACK);
-            boton.setStyle("-fx-border-color: black; -fx-border-width: 2px");
-            boton.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
-        } else {
             boton.setTextFill(Color.WHITE);
             boton.setStyle("-fx-border-color: white; -fx-border-width: 2px");
             boton.setBackground(new Background(new BackgroundFill(Color.BLACK, CornerRadii.EMPTY, Insets.EMPTY)));
+        } else {
+            boton.setTextFill(Color.BLACK);
+            boton.setStyle("-fx-border-color: black; -fx-border-width: 2px");
+            boton.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
         }
     }
 }
