@@ -7,7 +7,7 @@ import edu.fiuba.algo3.modelo.pregunta.modalidad.bonificacion.Multiplicador;
 import edu.fiuba.algo3.modelo.pregunta.pregunta.EnunciadosOpciones;
 import edu.fiuba.algo3.modelo.pregunta.pregunta.Pregunta;
 import edu.fiuba.algo3.modelo.pregunta.respuesta.Respuesta;
-import edu.fiuba.algo3.modelo.pregunta.respuesta.RespuestaDeJugador;
+import edu.fiuba.algo3.modelo.jugador.RespuestaDeJugador;
 import edu.fiuba.algo3.modelo.pregunta.respuesta.RespuestaVerdaderoFalso;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -69,7 +69,7 @@ public class VerdaderoFalsoPenalidadConMultiplicadorTest {
         RespuestaDeJugador respuestaDeJugador1 = new RespuestaDeJugador(jugador1, respuestaJugador1);
         RespuestaDeJugador respuestaDeJugador2 = new RespuestaDeJugador(jugador2, respuestaJugador2);
 
-        ArrayList<RespuestaDeJugador> respuestasJugadores = new ArrayList<RespuestaDeJugador>();
+        ArrayList<RespuestaDeJugador> respuestasJugadores = new ArrayList<>();
         respuestasJugadores.add(respuestaDeJugador1);
         respuestasJugadores.add(respuestaDeJugador2);
 
@@ -105,7 +105,7 @@ public class VerdaderoFalsoPenalidadConMultiplicadorTest {
         RespuestaDeJugador respuestaDeJugador1 = new RespuestaDeJugador(jugador1, respuestaJugador1);
         RespuestaDeJugador respuestaDeJugador2 = new RespuestaDeJugador(jugador2, respuestaJugador2);
 
-        ArrayList<RespuestaDeJugador> respuestasJugadores = new ArrayList<RespuestaDeJugador>();
+        ArrayList<RespuestaDeJugador> respuestasJugadores = new ArrayList<>();
         respuestasJugadores.add(respuestaDeJugador1);
         respuestasJugadores.add(respuestaDeJugador2);
 

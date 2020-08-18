@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.interfaz.layouts.puntajesSubLayouts;
+package edu.fiuba.algo3.interfaz.layouts.layoutPuntajes.puntajesSubLayouts;
 
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import javafx.geometry.Insets;

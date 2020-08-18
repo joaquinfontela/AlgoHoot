@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.interfaz.layouts.preguntaSubLayouts;
+package edu.fiuba.algo3.interfaz.layouts.layoutPregunta.preguntaSubLayouts;
 
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;

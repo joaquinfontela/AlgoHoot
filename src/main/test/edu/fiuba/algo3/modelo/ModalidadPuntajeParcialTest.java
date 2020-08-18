@@ -4,7 +4,7 @@ import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.pregunta.modalidad.modalidad.ModalidadPuntajeParcial;
 import edu.fiuba.algo3.modelo.pregunta.modalidad.bonificacion.ExclusividadDePuntaje;
 import edu.fiuba.algo3.modelo.pregunta.respuesta.EstadisticasRespuesta;
-import edu.fiuba.algo3.modelo.pregunta.respuesta.RespuestaDeJugador;
+import edu.fiuba.algo3.modelo.jugador.RespuestaDeJugador;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -3,7 +3,7 @@ package edu.fiuba.algo3.modelo.pregunta.pregunta;
 import edu.fiuba.algo3.modelo.pregunta.modalidad.bonificacion.Bonificacion;
 import edu.fiuba.algo3.modelo.pregunta.modalidad.modalidad.Modalidad;
 import edu.fiuba.algo3.modelo.pregunta.respuesta.Respuesta;
-import edu.fiuba.algo3.modelo.pregunta.respuesta.RespuestaDeJugador;
+import edu.fiuba.algo3.modelo.jugador.RespuestaDeJugador;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.interfaz.layouts.registroSublayouts;
+package edu.fiuba.algo3.interfaz.layouts.layoutRegistro.registroSublayouts;
 
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;

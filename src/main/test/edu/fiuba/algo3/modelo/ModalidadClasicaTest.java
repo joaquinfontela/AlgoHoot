@@ -5,7 +5,7 @@ import edu.fiuba.algo3.modelo.pregunta.modalidad.bonificacion.ExclusividadDePunt
 import edu.fiuba.algo3.modelo.pregunta.modalidad.modalidad.ModalidadClasica;
 import edu.fiuba.algo3.modelo.pregunta.respuesta.EstadisticasRespuesta;
 
-import edu.fiuba.algo3.modelo.pregunta.respuesta.RespuestaDeJugador;
+import edu.fiuba.algo3.modelo.jugador.RespuestaDeJugador;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -25,7 +25,7 @@ public class ModalidadClasicaTest {
     ExclusividadDePuntaje exclusividad;
 
     @BeforeEach
-    public void init() throws Exception {
+    public void init() {
 
         jugador1 = new Jugador("Pablito");
         jugador2 = new Jugador("Ramona");

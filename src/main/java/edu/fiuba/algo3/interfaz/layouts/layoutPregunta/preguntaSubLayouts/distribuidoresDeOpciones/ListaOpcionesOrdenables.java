@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.interfaz.layouts.preguntaSubLayouts.distribuidoresDeOpciones;
+package edu.fiuba.algo3.interfaz.layouts.layoutPregunta.preguntaSubLayouts.distribuidoresDeOpciones;
 
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonOrdenable.BotonOrdenable;
 import edu.fiuba.algo3.modelo.pregunta.pregunta.EnunciadosOpciones;

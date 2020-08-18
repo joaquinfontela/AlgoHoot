@@ -1,8 +1,8 @@
-package edu.fiuba.algo3.interfaz.layouts;
+package edu.fiuba.algo3.interfaz.layouts.layoutPuntajes;
 
 import edu.fiuba.algo3.controladores.BotonVolverAlMenuHandler;
 import edu.fiuba.algo3.interfaz.botones.botonesComunes.BotonVolverAlInicio;
-import edu.fiuba.algo3.interfaz.layouts.puntajesSubLayouts.LayoutPuntajeJugador;
+import edu.fiuba.algo3.interfaz.layouts.layoutPuntajes.puntajesSubLayouts.LayoutPuntajeJugador;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;

@@ -1,6 +1,6 @@
-package edu.fiuba.algo3.interfaz.layouts.preguntaSubLayouts;
+package edu.fiuba.algo3.interfaz.layouts.layoutPregunta.preguntaSubLayouts;
 
-import edu.fiuba.algo3.interfaz.layouts.preguntaSubLayouts.distribuidoresDeOpciones.*;
+import edu.fiuba.algo3.interfaz.layouts.layoutPregunta.preguntaSubLayouts.distribuidoresDeOpciones.*;
 import edu.fiuba.algo3.modelo.GestorDeJuego;
 import edu.fiuba.algo3.modelo.pregunta.pregunta.EnunciadosOpciones;
 import javafx.scene.layout.StackPane;

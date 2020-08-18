@@ -1,9 +1,9 @@
-package edu.fiuba.algo3.interfaz.layouts;
+package edu.fiuba.algo3.interfaz.layouts.layoutRegistro;
 
 import edu.fiuba.algo3.controladores.BotonRegistroHandler;
 import edu.fiuba.algo3.interfaz.botones.botonesComunes.BotonRegistro;
-import edu.fiuba.algo3.interfaz.layouts.registroSublayouts.LayoutRegistroJugadores;
-import edu.fiuba.algo3.interfaz.layouts.registroSublayouts.LayoutSeleccionRondas;
+import edu.fiuba.algo3.interfaz.layouts.layoutRegistro.registroSublayouts.LayoutRegistroJugadores;
+import edu.fiuba.algo3.interfaz.layouts.layoutRegistro.registroSublayouts.LayoutSeleccionRondas;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 

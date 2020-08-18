@@ -2,7 +2,7 @@ package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.pregunta.pregunta.EnunciadosOpciones;
 import edu.fiuba.algo3.modelo.pregunta.pregunta.Pregunta;
-import edu.fiuba.algo3.modelo.pregunta.respuesta.RespuestaDeJugador;
+import edu.fiuba.algo3.modelo.jugador.RespuestaDeJugador;
 import edu.fiuba.algo3.modelo.pregunta.respuesta.RespuestaVerdaderoFalso;
 import edu.fiuba.algo3.modelo.pregunta.modalidad.modalidad.ModalidadClasica;
 import edu.fiuba.algo3.modelo.pregunta.modalidad.modalidad.Modalidad;
