@@ -15,25 +15,25 @@ public abstract class EstilosBotonComun extends ButtonSkin {
 
         boton = unBoton;
 
-        eventoMousePasaPorArriba();
+        this.eventoMousePasaPorArriba();
     }
 
     protected void eventoMousePasaPorArriba() {
 
         final FadeTransition fadeIn = new FadeTransition(Duration.millis(100));
         fadeIn.setNode(boton);
-        fadeIn.setToValue(1.0);
+        fadeIn.setToValue(0.8);
         boton.setOnMouseEntered(e -> {
             fadeIn.playFromStart();
         });
 
         final FadeTransition fadeOut = new FadeTransition(Duration.millis(100));
         fadeOut.setNode(boton);
-        fadeOut.setToValue(0.8);
+        fadeOut.setToValue(0.6);
         boton.setOnMouseExited(e -> {
             fadeOut.playFromStart();
         });
 
-        boton.setOpacity(0.8);
+        boton.setOpacity(0.6);
     }
 }

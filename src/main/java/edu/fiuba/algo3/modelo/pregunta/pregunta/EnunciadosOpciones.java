@@ -11,8 +11,7 @@ public class EnunciadosOpciones {
     public EnunciadosOpciones(){
 
         opciones = new HashMap<>();
-        opciones.put(0, new ArrayList<>());
-        opciones.put(1, new ArrayList<>());
+        for (int i = 0; i < 2; i++) opciones.put(i, new ArrayList<>());
         orden = 0;
     }
 

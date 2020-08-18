@@ -16,8 +16,8 @@ public class EstilosBotonSeleccionable extends ButtonSkin {
 
         boton = unBoton;
 
-        eventoMousePasaPorArriba();
-        eventoBotonClickeado();
+        this.eventoMousePasaPorArriba();
+        this.eventoBotonClickeado();
     }
 
     protected void eventoMousePasaPorArriba() {

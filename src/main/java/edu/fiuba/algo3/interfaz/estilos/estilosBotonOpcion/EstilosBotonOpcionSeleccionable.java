@@ -12,6 +12,7 @@ public class EstilosBotonOpcionSeleccionable extends EstilosBotonSeleccionable {
     public EstilosBotonOpcionSeleccionable(BotonSeleccionable unBoton, Color color, double anchura, double altura) {
 
         super(unBoton);
+
         boton.setStyle("-fx-border-color: black; -fx-border-width: 2px");
 
         boton.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
