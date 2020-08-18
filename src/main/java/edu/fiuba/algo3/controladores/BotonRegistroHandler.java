@@ -7,17 +7,14 @@ import edu.fiuba.algo3.modelo.LectorDeArchivo;
 import edu.fiuba.algo3.modelo.jugador.Jugador;
 import edu.fiuba.algo3.modelo.pregunta.pregunta.InformacionPregunta;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
-import java.util.Stack;
 
-public class BotonRegistroHandler implements EventHandler<ActionEvent> {
+public class BotonRegistroHandler extends AlertaHandler {
 
     private Stage stage;
     private LayoutRegistro layoutActual;
@@ -36,9 +33,7 @@ public class BotonRegistroHandler implements EventHandler<ActionEvent> {
             LayoutPreturno layoutPreturno = new LayoutPreturno(stage, gestor);
             stage.setScene(new Scene(layoutPreturno, 640, 480));
         } catch (Exception exception) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText(exception.getMessage());
-            alert.show();
+            this.mostrarAlerta(exception);
         }
     }
 

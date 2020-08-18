@@ -8,10 +8,11 @@ import edu.fiuba.algo3.modelo.jugador.Jugador;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public abstract class BotonTerminarTurnoHandler implements EventHandler<ActionEvent> {
+public abstract class BotonTerminarTurnoHandler extends AlertaHandler {
 
     protected Stage stage;
     protected GestorDeJuego gestor;
@@ -37,5 +38,12 @@ public abstract class BotonTerminarTurnoHandler implements EventHandler<ActionEv
             layout = new LayoutPreturno(stage, gestor);
         }
         stage.setScene(new Scene(layout, 640, 480));
+    }
+
+    protected void mostrarAlerta(Exception exception) {
+
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setContentText(exception.getMessage());
+        alert.show();
     }
 }

@@ -19,9 +19,7 @@ public class BotonSeAcaboElTiempoHandler extends BotonTerminarTurnoHandler {
             gestor.avanzarSiguienteTurno();
             this.cambiarEscena();
         } catch(Exception exception) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText(exception.getMessage());
-            alert.show();
+            this.mostrarAlerta(exception);
         }
     }
 }

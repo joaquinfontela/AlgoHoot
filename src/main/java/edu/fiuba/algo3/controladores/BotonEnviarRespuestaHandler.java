@@ -28,9 +28,7 @@ public class BotonEnviarRespuestaHandler extends BotonTerminarTurnoHandler {
                 layoutActual.detenerTemporizador();
                 this.cambiarEscena();
             } catch (Exception exception) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText(exception.getMessage());
-                alert.show();
+                this.mostrarAlerta(exception);
             }
     }
 
