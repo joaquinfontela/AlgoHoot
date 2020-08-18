@@ -10,6 +10,6 @@ public class BotonOpcionSeleccionableChicoLargo extends BotonOpcionSeleccionable
     public BotonOpcionSeleccionableChicoLargo(String enunciado, List<Integer> posicion, Color color) {
 
         super(enunciado, posicion);
-        this.setSkin(new EstilosBotonOpcionSeleccionable(this, color,520,50));
+        this.setSkin(new EstilosBotonOpcionSeleccionable(this, color,500,100));
     }
 }

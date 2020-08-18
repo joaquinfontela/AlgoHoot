@@ -10,6 +10,6 @@ public class BotonOrdenableChicoLargo extends BotonOrdenable {
     public BotonOrdenableChicoLargo(String enunciado, List<Integer> posicionXY, Color color) {
 
         super(enunciado, posicionXY);
-        this.setSkin(new EstilosBotonOrdenable(this, color,375,90));
+        this.setSkin(new EstilosBotonOrdenable(this, color,500,100));
     }
 }

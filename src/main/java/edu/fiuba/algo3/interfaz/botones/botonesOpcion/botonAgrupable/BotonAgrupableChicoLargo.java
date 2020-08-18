@@ -9,6 +9,6 @@ public class BotonAgrupableChicoLargo extends BotonAgrupable {
     public BotonAgrupableChicoLargo(String enunciado, List<Integer> posicion) {
 
         super(enunciado, posicion);
-        this.setSkin(new EstilosBotonAgrupable(this,520,50));
+        this.setSkin(new EstilosBotonAgrupable(this,500,100));
     }
 }
