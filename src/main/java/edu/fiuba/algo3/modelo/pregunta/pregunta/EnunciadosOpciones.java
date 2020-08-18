@@ -11,6 +11,8 @@ public class EnunciadosOpciones {
     public EnunciadosOpciones(){
 
         opciones = new HashMap<>();
+        opciones.put(0, new ArrayList<>());
+        opciones.put(1, new ArrayList<>());
         orden = 0;
     }
 
@@ -55,7 +57,6 @@ public class EnunciadosOpciones {
     }
 
     public int obtenerOrden() {
-
         return orden;
     }
 
@@ -93,21 +94,11 @@ public class EnunciadosOpciones {
     }
 
     public ArrayList<String> enunciadosGrupoA() {
-
-        if (opciones.get(0) == null) {
-            return new ArrayList<>();
-        } else {
-            return opciones.get(0);
-        }
+        return opciones.get(0);
     }
 
     public ArrayList<String> enunciadosGrupoB(){
-
-        if (opciones.get(1) == null) {
-            return new ArrayList<>();
-        } else {
             return opciones.get(1);
-        }
     }
 
     public ArrayList<String> enunciadosOrdenados() throws Exception {
@@ -123,7 +114,6 @@ public class EnunciadosOpciones {
 
     @Override
     public String toString() {
-
         return opciones.toString();
     }
 }
