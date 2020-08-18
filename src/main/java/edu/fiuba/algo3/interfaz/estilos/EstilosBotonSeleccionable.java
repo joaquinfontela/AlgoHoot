@@ -3,7 +3,6 @@ package edu.fiuba.algo3.interfaz.estilos;
 import edu.fiuba.algo3.interfaz.botones.BotonSeleccionable;
 import javafx.animation.FadeTransition;
 import javafx.scene.control.skin.ButtonSkin;
-import javafx.scene.input.MouseEvent;
 import javafx.util.Duration;
 
 public class EstilosBotonSeleccionable extends ButtonSkin {
@@ -17,7 +16,6 @@ public class EstilosBotonSeleccionable extends ButtonSkin {
         boton = unBoton;
 
         this.eventoMousePasaPorArriba();
-        this.eventoBotonClickeado();
     }
 
     protected void eventoMousePasaPorArriba() {
@@ -41,24 +39,5 @@ public class EstilosBotonSeleccionable extends ButtonSkin {
         });
 
         boton.setOpacity(0.6);
-    }
-
-    private void eventoBotonClickeado() {
-
-        boton.setOnMouseClicked(e -> {
-
-            if (e.getEventType().equals(MouseEvent.MOUSE_CLICKED)){
-                actualizarOpacidad();
-            }
-        });
-    }
-
-    private void actualizarOpacidad() {
-
-        if (boton.fueSeleccionado()) {
-            boton.setOpacity(1.0);
-        } else {
-            boton.setOpacity(0.6);
-        }
     }
 }

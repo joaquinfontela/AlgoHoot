@@ -1,6 +1,7 @@
 package edu.fiuba.algo3.interfaz.layouts.layoutPregunta.preguntaSubLayouts.distribuidoresDeOpciones;
 
 import edu.fiuba.algo3.controladores.BotonOpcionSeleccionableHandler;
+import edu.fiuba.algo3.interfaz.botones.ListaDeBotonesSeleccionables;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonSeleccionable.BotonOpcionSeleccionable;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonSeleccionable.BotonOpcionSeleccionableGrande;
 import edu.fiuba.algo3.modelo.GestorDeJuego;
@@ -18,7 +19,7 @@ public class DistribuidorDeDosOpciones extends DistribuidorDeOpcionesGrandes {
                                      EnunciadosOpciones opcionesRespuesta) {
 
         if (gestor.esTipoDeRespuestaComparable(RespuestaVerdaderoFalso.class)) {
-            ListaOpcionesVerdaderoFalso lista = new ListaOpcionesVerdaderoFalso(opcionesRespuesta);
+            ListaDeBotonesSeleccionables lista = new ListaDeBotonesSeleccionables();
             this.agregarOpcionVerdaderoFalso(opciones.get(0), Arrays.asList(-245, 5), Color.RED,
                     opcionesRespuesta, lista);
             this.agregarOpcionVerdaderoFalso(opciones.get(1), Arrays.asList(245, 5), Color.BLUE,
@@ -34,7 +35,7 @@ public class DistribuidorDeDosOpciones extends DistribuidorDeOpcionesGrandes {
 
     private void agregarOpcionVerdaderoFalso(String enunciado, List<Integer> posicion,
                                              Color color, EnunciadosOpciones opcionesRespuesta,
-                                             ListaOpcionesVerdaderoFalso lista) {
+                                             ListaDeBotonesSeleccionables lista) {
 
         BotonOpcionSeleccionable opcion = new BotonOpcionSeleccionableGrande(enunciado, posicion, color);
         lista.add(opcion);
