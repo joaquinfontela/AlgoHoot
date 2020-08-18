@@ -17,22 +17,24 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 
+import java.util.List;
+
 public abstract class DistribuidorDeOpcionesGrandes extends StackPane {
 
-    protected void agregarOpcion(String enunciado, Integer desplazamientoEnX, Integer desplazamientoEnY,
-                                 Color color, GestorDeJuego gestor, EnunciadosOpciones opcionesRespuesta,
+    protected void agregarOpcion(String enunciado, List<Integer> posicion, Color color,
+                                 GestorDeJuego gestor, EnunciadosOpciones opcionesRespuesta,
                                  ListaOpcionesOrdenables listaOrdenables) {
 
         Button opcion;
         if (gestor.esTipoDeRespuestaComparable(RespuestaGroupChoice.class)) {
-            opcion = new BotonAgrupableGrande(enunciado, desplazamientoEnX, desplazamientoEnY);
+            opcion = new BotonAgrupableGrande(enunciado, posicion);
             opcion.setOnAction(new BotonAgrupableHandler((BotonAgrupable)opcion, opcionesRespuesta));
         } else if (gestor.esTipoDeRespuestaComparable(RespuestaOrderedChoice.class)) {
-            opcion = new BotonOrdenableGrande(enunciado, desplazamientoEnX, desplazamientoEnY, color);
+            opcion = new BotonOrdenableGrande(enunciado, posicion, color);
             listaOrdenables.add((BotonOrdenable) opcion);
             opcion.setOnAction(new BotonOrdenableHandler((BotonOrdenable)opcion, opcionesRespuesta));
         } else {
-            opcion = new BotonOpcionSeleccionableGrande(enunciado, desplazamientoEnX, desplazamientoEnY, color);
+            opcion = new BotonOpcionSeleccionableGrande(enunciado, posicion, color);
             opcion.setOnAction(new BotonOpcionSeleccionableHandler((BotonOpcionSeleccionable) opcion, opcionesRespuesta));
         }
         this.getChildren().add(opcion);

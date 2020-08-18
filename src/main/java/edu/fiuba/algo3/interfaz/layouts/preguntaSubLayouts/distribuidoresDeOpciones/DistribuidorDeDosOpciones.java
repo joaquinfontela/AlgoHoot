@@ -9,6 +9,8 @@ import edu.fiuba.algo3.modelo.pregunta.respuesta.RespuestaVerdaderoFalso;
 
 import javafx.scene.paint.Color;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class DistribuidorDeDosOpciones extends DistribuidorDeOpcionesGrandes {
 
@@ -17,25 +19,24 @@ public class DistribuidorDeDosOpciones extends DistribuidorDeOpcionesGrandes {
 
         if (gestor.esTipoDeRespuestaComparable(RespuestaVerdaderoFalso.class)) {
             ListaOpcionesVerdaderoFalso lista = new ListaOpcionesVerdaderoFalso(opcionesRespuesta);
-            this.agregarOpcionVerdaderoFalso(opciones.get(0), -245, Color.RED,
+            this.agregarOpcionVerdaderoFalso(opciones.get(0), Arrays.asList(-245, 5), Color.RED,
                     opcionesRespuesta, lista);
-            this.agregarOpcionVerdaderoFalso(opciones.get(1), 245, Color.BLUE,
+            this.agregarOpcionVerdaderoFalso(opciones.get(1), Arrays.asList(245, 5), Color.BLUE,
                     opcionesRespuesta, lista);
         } else {
             ListaOpcionesOrdenables listaOrdenable = new ListaOpcionesOrdenables(opcionesRespuesta);
-            this.agregarOpcion(opciones.get(0), -245, 5, Color.RED,
+            this.agregarOpcion(opciones.get(0), Arrays.asList(-245, 5), Color.RED,
                     gestor, opcionesRespuesta, listaOrdenable);
-            this.agregarOpcion(opciones.get(1), 245, 5, Color.BLUE,
+            this.agregarOpcion(opciones.get(1), Arrays.asList(245, 5), Color.BLUE,
                     gestor, opcionesRespuesta, listaOrdenable);
         }
     }
 
-    private void agregarOpcionVerdaderoFalso(String enunciado, Integer desplazamientoEnX,
+    private void agregarOpcionVerdaderoFalso(String enunciado, List<Integer> posicion,
                                              Color color, EnunciadosOpciones opcionesRespuesta,
                                              ListaOpcionesVerdaderoFalso lista) {
 
-        BotonOpcionSeleccionable opcion = new BotonOpcionSeleccionableGrande(enunciado, desplazamientoEnX,
-                5, color);
+        BotonOpcionSeleccionable opcion = new BotonOpcionSeleccionableGrande(enunciado, posicion, color);
         lista.add(opcion);
         opcion.setOnAction(new BotonOpcionSeleccionableHandler(opcion, opcionesRespuesta));
         this.getChildren().add(opcion);
