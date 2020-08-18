@@ -1,10 +1,14 @@
 package edu.fiuba.algo3;
 
 import edu.fiuba.algo3.interfaz.layouts.*;
-import edu.fiuba.algo3.modelo.jugador.Jugador;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
+
+import java.io.File;
 
 /**
  * JavaFX App cC
@@ -19,6 +23,11 @@ public class App extends Application {
 
         layoutInicio = new LayoutInicio(stage);
         scene = new Scene(layoutInicio, 640, 480);
+
+        /*String path = "";
+        Media media = new Media(new File(path).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);*/
 
         mostrarStage(stage);
     }
