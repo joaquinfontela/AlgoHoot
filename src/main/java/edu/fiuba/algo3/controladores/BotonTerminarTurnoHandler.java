@@ -39,11 +39,4 @@ public abstract class BotonTerminarTurnoHandler extends AlertaHandler {
         }
         stage.setScene(new Scene(layout, 640, 480));
     }
-
-    protected void mostrarAlerta(Exception exception) {
-
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setContentText(exception.getMessage());
-        alert.show();
-    }
 }
