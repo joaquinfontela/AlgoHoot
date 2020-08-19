@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.interfaz.layouts.layoutPregunta;
 
-import edu.fiuba.algo3.controladores.BotonEnviarRespuestaHandler;
 import edu.fiuba.algo3.interfaz.botones.botonesComunes.BotonEnviarRespuesta;
 import edu.fiuba.algo3.interfaz.layouts.layoutPregunta.preguntaSubLayouts.*;
 import edu.fiuba.algo3.modelo.GestorDeJuego;

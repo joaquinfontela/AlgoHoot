@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.interfaz.layouts.layoutPregunta.preguntaSubLayouts.distribuidoresDeOpciones;
 
-import edu.fiuba.algo3.controladores.BotonOpcionSeleccionableHandler;
 import edu.fiuba.algo3.interfaz.botones.ListaDeBotonesSeleccionables;
+import edu.fiuba.algo3.interfaz.botones.ListaOpcionesOrdenables;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonSeleccionable.BotonOpcionSeleccionable;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonSeleccionable.BotonOpcionSeleccionableGrande;
 import edu.fiuba.algo3.modelo.GestorDeJuego;
@@ -25,7 +25,7 @@ public class DistribuidorDeDosOpciones extends DistribuidorDeOpcionesGrandes {
             this.agregarOpcionVerdaderoFalso(opciones.get(1), Arrays.asList(245, 5), Color.BLUE,
                     opcionesRespuesta, lista);
         } else {
-            ListaOpcionesOrdenables listaOrdenable = new ListaOpcionesOrdenables(opcionesRespuesta);
+            ListaOpcionesOrdenables listaOrdenable = new ListaOpcionesOrdenables();
             this.agregarOpcion(opciones.get(0), Arrays.asList(-245, 5), Color.RED,
                     gestor, opcionesRespuesta, listaOrdenable);
             this.agregarOpcion(opciones.get(1), Arrays.asList(245, 5), Color.BLUE,

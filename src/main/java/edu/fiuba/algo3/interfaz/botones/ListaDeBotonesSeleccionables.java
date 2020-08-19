@@ -13,6 +13,7 @@ public class ListaDeBotonesSeleccionables extends ArrayList<BotonSeleccionable> 
     @Override
     public boolean add(BotonSeleccionable boton) {
 
+        //Deselecciono el resto de los botones
         boolean valorADevolver = super.add(boton);
         boton.setOnMouseClicked(e -> {
             for (BotonSeleccionable b : this) {

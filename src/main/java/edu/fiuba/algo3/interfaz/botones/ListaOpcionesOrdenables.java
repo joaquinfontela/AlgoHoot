@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.interfaz.layouts.layoutPregunta.preguntaSubLayouts.distribuidoresDeOpciones;
+package edu.fiuba.algo3.interfaz.botones;
 
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonOrdenable.BotonOrdenable;
 import edu.fiuba.algo3.modelo.pregunta.pregunta.EnunciadosOpciones;
@@ -8,12 +8,8 @@ import java.util.ArrayList;
 
 public class ListaOpcionesOrdenables extends ArrayList<BotonOrdenable> {
 
-    private EnunciadosOpciones opcionesRespuesta;
-
-    public ListaOpcionesOrdenables(EnunciadosOpciones enunciadosOpciones) {
-
+    public ListaOpcionesOrdenables() {
         super();
-        opcionesRespuesta = enunciadosOpciones;
     }
 
     @Override
@@ -21,7 +17,7 @@ public class ListaOpcionesOrdenables extends ArrayList<BotonOrdenable> {
 
         boolean valorADevolver = super.add(boton);
         boton.setOnMouseClicked(e -> {
-            if(!boton.estaOrdenado()) {
+            if (!boton.estaOrdenado()) {
                 for (BotonOrdenable b : this) {
                     if (!b.equals(boton) && b.getPosicion() > boton.getPosicionAnterior()) {
                         b.getOnAction().handle(new ActionEvent());

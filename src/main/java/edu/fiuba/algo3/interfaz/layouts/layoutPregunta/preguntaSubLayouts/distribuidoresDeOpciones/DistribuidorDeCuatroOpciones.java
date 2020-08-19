@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.interfaz.layouts.layoutPregunta.preguntaSubLayouts.distribuidoresDeOpciones;
 
+import edu.fiuba.algo3.interfaz.botones.ListaOpcionesOrdenables;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonAgrupable.BotonAgrupableChicoLargo;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonOrdenable.BotonOrdenable;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonOrdenable.BotonOrdenableChicoLargo;
@@ -19,7 +20,7 @@ public class DistribuidorDeCuatroOpciones extends StackPane {
     public DistribuidorDeCuatroOpciones(ArrayList<String> opciones, GestorDeJuego gestor,
                                         EnunciadosOpciones opcionesRespuesta) {
 
-        ListaOpcionesOrdenables listaOrdenable = new ListaOpcionesOrdenables(opcionesRespuesta);
+        ListaOpcionesOrdenables listaOrdenable = new ListaOpcionesOrdenables();
         this.agregarOpcion(opciones.get(0), Arrays.asList(-300, -50), Color.RED,
                 gestor, opcionesRespuesta, listaOrdenable);
         this.agregarOpcion(opciones.get(1), Arrays.asList(300, -50), Color.BLUE,
