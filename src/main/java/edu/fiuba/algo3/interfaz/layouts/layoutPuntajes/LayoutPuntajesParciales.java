@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.interfaz.layouts.layoutPuntajes;
 
-import edu.fiuba.algo3.controladores.BotonPuntajesParcialesHandler;
 import edu.fiuba.algo3.interfaz.botones.botonesComunes.BotonPuntajesParciales;
 import edu.fiuba.algo3.interfaz.layouts.layoutPuntajes.puntajesSubLayouts.LayoutPuntajeJugador;
 import edu.fiuba.algo3.modelo.GestorDeJuego;
@@ -24,7 +23,9 @@ public class LayoutPuntajesParciales extends StackPane {
         this.setBackground(new Background(new BackgroundFill(Color.DIMGRAY, CornerRadii.EMPTY, Insets.EMPTY)));
         this.agregarTituloDelLayout();
         this.agregarPuntajes(gestor);
-        this.agregarBoton(stage, gestor);
+
+        BotonPuntajesParciales boton = new BotonPuntajesParciales(stage, gestor);
+        this.getChildren().add(boton);
     }
 
     private void agregarTituloDelLayout() {
@@ -58,13 +59,5 @@ public class LayoutPuntajesParciales extends StackPane {
             this.getChildren().add(layout);
             contador++;
         }
-    }
-
-    private void agregarBoton(Stage stage, GestorDeJuego gestor) {
-
-        BotonPuntajesParciales boton = new BotonPuntajesParciales();
-        boton.setTranslateY(275);
-        boton.setOnAction(new BotonPuntajesParcialesHandler(stage, gestor));
-        this.getChildren().add(boton);
     }
 }

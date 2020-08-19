@@ -31,10 +31,7 @@ public class LayoutPregunta extends BorderPane {
         this.setRight(layoutBonificaciones);
         this.setLeft(layoutIzquierdo);
 
-        BotonEnviarRespuesta botonEnviarRespuesta = new BotonEnviarRespuesta();
-        botonEnviarRespuesta.setTranslateY(-10.0);
-        botonEnviarRespuesta.setTranslateX(525.0);
-        botonEnviarRespuesta.setOnAction(new BotonEnviarRespuestaHandler(stage, gestor, this));
+        BotonEnviarRespuesta botonEnviarRespuesta = new BotonEnviarRespuesta(stage, gestor, this);
         this.setBottom(botonEnviarRespuesta);
     }
 

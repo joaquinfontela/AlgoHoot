@@ -28,17 +28,11 @@ public class LayoutPreturno extends StackPane {
         textArea.setStyle("-fx-border-color: mediumpurple; -fx-background-color: transparent; -fx-border-width: 5px");
         this.getChildren().add(textArea);
 
-        this.agregarBoton(stage, gestor);
+        BotonPreturno botonPreturno = new BotonPreturno(stage, gestor);
+        this.getChildren().add(botonPreturno);
+
         this.agregarTitulo();
         this.agregarNicknameProximoTurno(gestor.obtenerNombreJugadorActual());
-    }
-
-    private void agregarBoton(Stage stage, GestorDeJuego gestor) {
-
-        BotonPreturno botonPreturno = new BotonPreturno();
-        botonPreturno.setTranslateY(200.0);
-        botonPreturno.setOnAction(new BotonPreturnoHandler(stage, gestor));
-        this.getChildren().add(botonPreturno);
     }
 
     private void agregarTitulo() {

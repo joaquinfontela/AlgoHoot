@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.interfaz.layouts;
 
-import edu.fiuba.algo3.controladores.BotonSeAcaboElTiempoHandler;
 import edu.fiuba.algo3.interfaz.botones.botonesComunes.BotonSeAcaboElTiempo;
 import edu.fiuba.algo3.modelo.GestorDeJuego;
 import javafx.geometry.Insets;
@@ -35,10 +34,7 @@ public class LayoutSeAcaboElTiempo extends StackPane {
 
         this.setBackground(new Background(new BackgroundFill(Color.web("#d9162c"), CornerRadii.EMPTY, Insets.EMPTY)));
 
-        BotonSeAcaboElTiempo boton = new BotonSeAcaboElTiempo();
-        boton.setTranslateY(250);
-        boton.setOnAction(new BotonSeAcaboElTiempoHandler(stage, gestor));
-
+        BotonSeAcaboElTiempo boton = new BotonSeAcaboElTiempo(stage, gestor);
         this.getChildren().add(boton);
     }
 }

@@ -1,13 +1,8 @@
 package edu.fiuba.algo3.interfaz.layouts.layoutPregunta.preguntaSubLayouts.distribuidoresDeOpciones;
 
-import edu.fiuba.algo3.controladores.BotonAgrupableHandler;
-import edu.fiuba.algo3.controladores.BotonOrdenableHandler;
-import edu.fiuba.algo3.controladores.BotonOpcionSeleccionableHandler;
-import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonAgrupable.BotonAgrupable;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonAgrupable.BotonAgrupableChico;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonOrdenable.BotonOrdenable;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonOrdenable.BotonOrdenableChico;
-import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonSeleccionable.BotonOpcionSeleccionable;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonSeleccionable.BotonOpcionSeleccionableChico;
 import edu.fiuba.algo3.modelo.GestorDeJuego;
 import edu.fiuba.algo3.modelo.pregunta.pregunta.EnunciadosOpciones;
@@ -27,15 +22,12 @@ public abstract class DistribuidorDeOpcionesChicas extends StackPane {
 
         Button opcion;
         if (gestor.esTipoDeRespuestaComparable(RespuestaGroupChoice.class)) {
-            opcion = new BotonAgrupableChico(enunciado, posicion);
-            opcion.setOnAction(new BotonAgrupableHandler((BotonAgrupable)opcion, opcionesRespuesta));
+            opcion = new BotonAgrupableChico(enunciado, posicion, opcionesRespuesta);
         } else if (gestor.esTipoDeRespuestaComparable(RespuestaOrderedChoice.class)) {
-            opcion = new BotonOrdenableChico(enunciado, posicion, color);
+            opcion = new BotonOrdenableChico(enunciado, posicion, color, opcionesRespuesta);
             listaOrdenables.add((BotonOrdenable) opcion);
-            opcion.setOnAction(new BotonOrdenableHandler((BotonOrdenable) opcion, opcionesRespuesta));
         } else {
-            opcion = new BotonOpcionSeleccionableChico(enunciado, posicion, color);
-            opcion.setOnAction(new BotonOpcionSeleccionableHandler((BotonOpcionSeleccionable) opcion, opcionesRespuesta));
+            opcion = new BotonOpcionSeleccionableChico(enunciado, posicion, color, opcionesRespuesta);
         }
         this.getChildren().add(opcion);
     }

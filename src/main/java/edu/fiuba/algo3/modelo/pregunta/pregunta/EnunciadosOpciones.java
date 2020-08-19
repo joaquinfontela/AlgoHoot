@@ -11,7 +11,7 @@ public class EnunciadosOpciones {
     public EnunciadosOpciones(){
 
         opciones = new HashMap<>();
-        for (int i = 0; i < 2; i++) opciones.put(i, new ArrayList<>());
+        for (int i = -1; i < 2; i++) opciones.put(i, new ArrayList<>());
         orden = 0;
     }
 
@@ -39,13 +39,27 @@ public class EnunciadosOpciones {
 
     public void agregarEnunciadoGrupoA(String enunciado) {
 
-        this.agregarEnunciado(enunciado, 0, 1);
+        if (opciones.get(-1).contains(enunciado)) {
+            this.agregarEnunciado(enunciado, 0, -1);
+        } else {
+            this.agregarEnunciado(enunciado, 0, 1);
+        }
     }
 
     public void agregarEnunciadoGrupoB(String enunciado) {
 
-        this.agregarEnunciado(enunciado, 1, 0);
+        if (opciones.get(-1).contains(enunciado)) {
+            this.agregarEnunciado(enunciado, 1, -1);
+        } else {
+            this.agregarEnunciado(enunciado, 1, 0);
+        }
     }
+
+    public void agregarEnunciadoNoAgrupado(String enunciado) {
+
+        this.agregarEnunciadoEidentificador(-1, enunciado);
+    }
+
 
     private void agregarEnunciado(String enunciado, int identificadorDondeAgregar, int identificadorDondeEliminar) {
 
@@ -72,38 +86,44 @@ public class EnunciadosOpciones {
 
     public void eliminarEnunciadoEnOrden(String enunciado) {
 
+        int ordenNuevo = 0;
         for (Integer key : opciones.keySet()) {
-            if (opciones.get(key).contains(enunciado)) orden = key;
-        }
-        for (int i = orden; i < opciones.keySet().size()-1; i++){
-            if(!opciones.get(i).isEmpty()) {
-                this.agregarEnunciado(opciones.get(i).get(0), -1, i);
+            if (opciones.get(key).contains(enunciado)) {
+                this.agregarEnunciado(opciones.get(key).get(0), -1, key);
+            } else if (key != -1 && !opciones.get(key).isEmpty()) {
+                ordenNuevo++;
             }
         }
+        orden = ordenNuevo;
     }
 
     public ArrayList<String> enunciadosCorrectos() throws Exception {
 
-        if (opciones.get(1) != null && !opciones.get(1).isEmpty()) return opciones.get(1);
-        throw new Exception("No ha selecionado ninguna opcion");
+        if (opciones.get(1).isEmpty()) throw new Exception("No ha selecionado ninguna opcion");
+        return opciones.get(1);
     }
 
-    public ArrayList<String> enunciadosIncorrectos(){
+    public ArrayList<String> enunciadosIncorrectos() throws Exception {
+
+        if (opciones.get(1).isEmpty()) throw new Exception("No ha selecionado ninguna opcion");
         return opciones.get(0);
     }
 
-    public ArrayList<String> enunciadosGrupoA() {
+    public ArrayList<String> enunciadosGrupoA() throws Exception {
+
+        if(!opciones.get(-1).isEmpty()) throw new Exception("No has agrupado todas las opciones");
         return opciones.get(0);
     }
 
-    public ArrayList<String> enunciadosGrupoB(){
-            return opciones.get(1);
+    public ArrayList<String> enunciadosGrupoB() throws Exception {
+
+        if(!opciones.get(-1).isEmpty()) throw new Exception("No has agrupado todas las opciones");
+        return opciones.get(1);
     }
 
     public ArrayList<String> enunciadosOrdenados() throws Exception {
 
-        if (opciones.get(-1) != null && !opciones.get(-1).isEmpty())
-            throw new Exception("No has ordenado todas las opciones");
+        if (!opciones.get(-1).isEmpty()) throw new Exception("No has ordenado todas las opciones");
         ArrayList<String> enunciadosOrdenados = new ArrayList<>();
         for (Integer key : opciones.keySet()) {
             if (key != -1) enunciadosOrdenados.add(opciones.get(key).get(0));

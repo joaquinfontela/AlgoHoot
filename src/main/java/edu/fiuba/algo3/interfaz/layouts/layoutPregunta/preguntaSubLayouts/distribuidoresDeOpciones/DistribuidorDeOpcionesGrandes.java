@@ -1,13 +1,8 @@
 package edu.fiuba.algo3.interfaz.layouts.layoutPregunta.preguntaSubLayouts.distribuidoresDeOpciones;
 
-import edu.fiuba.algo3.controladores.BotonAgrupableHandler;
-import edu.fiuba.algo3.controladores.BotonOrdenableHandler;
-import edu.fiuba.algo3.controladores.BotonOpcionSeleccionableHandler;
-import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonAgrupable.BotonAgrupable;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonAgrupable.BotonAgrupableGrande;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonOrdenable.BotonOrdenable;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonOrdenable.BotonOrdenableGrande;
-import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonSeleccionable.BotonOpcionSeleccionable;
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonSeleccionable.BotonOpcionSeleccionableGrande;
 import edu.fiuba.algo3.modelo.GestorDeJuego;
 import edu.fiuba.algo3.modelo.pregunta.pregunta.EnunciadosOpciones;
@@ -27,15 +22,12 @@ public abstract class DistribuidorDeOpcionesGrandes extends StackPane {
 
         Button opcion;
         if (gestor.esTipoDeRespuestaComparable(RespuestaGroupChoice.class)) {
-            opcion = new BotonAgrupableGrande(enunciado, posicion);
-            opcion.setOnAction(new BotonAgrupableHandler((BotonAgrupable)opcion, opcionesRespuesta));
+            opcion = new BotonAgrupableGrande(enunciado, posicion, opcionesRespuesta);
         } else if (gestor.esTipoDeRespuestaComparable(RespuestaOrderedChoice.class)) {
-            opcion = new BotonOrdenableGrande(enunciado, posicion, color);
+            opcion = new BotonOrdenableGrande(enunciado, posicion, color, opcionesRespuesta);
             listaOrdenables.add((BotonOrdenable) opcion);
-            opcion.setOnAction(new BotonOrdenableHandler((BotonOrdenable)opcion, opcionesRespuesta));
         } else {
-            opcion = new BotonOpcionSeleccionableGrande(enunciado, posicion, color);
-            opcion.setOnAction(new BotonOpcionSeleccionableHandler((BotonOpcionSeleccionable) opcion, opcionesRespuesta));
+            opcion = new BotonOpcionSeleccionableGrande(enunciado, posicion, color, opcionesRespuesta);
         }
         this.getChildren().add(opcion);
     }

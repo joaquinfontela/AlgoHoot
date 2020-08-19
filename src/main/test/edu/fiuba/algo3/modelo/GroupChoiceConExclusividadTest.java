@@ -67,7 +67,7 @@ public class GroupChoiceConExclusividadTest {
     }
 
     @Test
-    public void test01seCreaUnaPreguntaGroupChoiceYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test01seCreaUnaPreguntaGroupChoiceYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Israel");
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Oman");
@@ -100,7 +100,7 @@ public class GroupChoiceConExclusividadTest {
     }
 
     @Test
-    public void test02seCreaUnaPreguntaGroupChoiceYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test02seCreaUnaPreguntaGroupChoiceYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Israel");
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Oman");
@@ -133,7 +133,7 @@ public class GroupChoiceConExclusividadTest {
     }
 
     @Test
-    public void test03seCreaUnaPreguntaGroupChoiceYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test03seCreaUnaPreguntaGroupChoiceYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador (1, "Israel");
         opcionesParaAgregarJugador1.agregarEnunciadoEidentificador(1, "Oman");

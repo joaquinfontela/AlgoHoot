@@ -12,4 +12,6 @@ public abstract class AlertaHandler implements EventHandler<ActionEvent> {
         alert.setContentText(exception.getMessage());
         alert.show();
     }
+
+    public abstract void handle(ActionEvent event);
 }

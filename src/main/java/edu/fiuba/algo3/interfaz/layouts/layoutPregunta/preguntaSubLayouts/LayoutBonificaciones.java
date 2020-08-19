@@ -20,21 +20,18 @@ public class LayoutBonificaciones extends StackPane {
         if (!gestor.jugadorActualTieneAlgunaExclusividad() || !gestor.sePuedeUsarExclusividad()){
             botonExclusividad.setDisable(true);
         }
-        botonExclusividad.setOnAction(new BotonSeleccionableHandler(botonExclusividad));
         this.getChildren().add(botonExclusividad);
         ListaDeBotonesSeleccionables lista = new ListaDeBotonesSeleccionables();
         botonMultiplicadorX2 = new BotonMultiplicadorX2(-50, -285);
         if (!gestor.jugadorActualTieneAlgunMultiplicadorX2() || gestor.sePuedeUsarExclusividad()) {
             botonMultiplicadorX2.setDisable(true);
         }
-        botonMultiplicadorX2.setOnAction(new BotonSeleccionableHandler(botonMultiplicadorX2));
         lista.add(botonMultiplicadorX2);
         this.getChildren().add(botonMultiplicadorX2);
         botonMultiplicadorX3 = new BotonMultiplicadorX3(-50, -170);
         if (!gestor.jugadorActualTieneAlgunMultiplicadorX3() || gestor.sePuedeUsarExclusividad()) {
             botonMultiplicadorX3.setDisable(true);
         }
-        botonMultiplicadorX3.setOnAction(new BotonSeleccionableHandler(botonMultiplicadorX3));
         lista.add(botonMultiplicadorX3);
         this.getChildren().add(botonMultiplicadorX3);
     }

@@ -2,6 +2,7 @@ package edu.fiuba.algo3.interfaz.layouts.layoutPregunta.preguntaSubLayouts.distr
 
 import edu.fiuba.algo3.interfaz.botones.botonesOpcion.botonOrdenable.BotonOrdenable;
 import edu.fiuba.algo3.modelo.pregunta.pregunta.EnunciadosOpciones;
+import javafx.event.ActionEvent;
 
 import java.util.ArrayList;
 
@@ -20,13 +21,10 @@ public class ListaOpcionesOrdenables extends ArrayList<BotonOrdenable> {
 
         boolean valorADevolver = super.add(boton);
         boton.setOnMouseClicked(e -> {
-            for (BotonOrdenable b : this){
-                if (!b.equals(boton)) {
-                    if(!boton.estaOrdenado()){
-                        if (b.getPosicion() > boton.getPosicionAnterior()) {
-                            b.setText(b.getText().substring(0, b.getText().length() - 4));
-                            b.establecerNoOrdenado();
-                        }
+            if(!boton.estaOrdenado()) {
+                for (BotonOrdenable b : this) {
+                    if (!b.equals(boton) && b.getPosicion() > boton.getPosicionAnterior()) {
+                        b.getOnAction().handle(new ActionEvent());
                     }
                 }
             }

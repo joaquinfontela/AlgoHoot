@@ -29,7 +29,7 @@ public abstract class BotonTerminarTurnoHandler extends AlertaHandler {
         if (gestor.juegoFinalizado()) {
             Jugador posibleJugadorGanador = gestor.obtenerPosibleJugadorGanador();
             Jugador posibleJugadorPerdedor = gestor.obtenerPosibleJugadorPerdedor();
-            layout = new LayoutPuntajeFinal(stage,posibleJugadorGanador, posibleJugadorPerdedor);
+            layout = new LayoutPuntajeFinal(stage, posibleJugadorGanador, posibleJugadorPerdedor);
         } else if (gestor.comienzaNuevaRonda()) {
             layout = new LayoutPuntajesParciales(stage, gestor);
         } else {

@@ -19,10 +19,10 @@ public class EstilosBotonAgrupable extends EstilosBotonComun {
 
         super(unBoton);
 
-        boton.setStyle("-fx-border-color: white; -fx-border-width: 2px");
+        boton.setStyle("-fx-border-color: black; -fx-border-width: 2px");
 
-        boton.setBackground(new Background(new BackgroundFill(Color.BLACK, CornerRadii.EMPTY, Insets.EMPTY)));
-        boton.setTextFill(Color.WHITE);
+        boton.setBackground(new Background(new BackgroundFill(Color.web("d8b97b"), CornerRadii.EMPTY, Insets.EMPTY)));
+        boton.setTextFill(Color.BLACK);
         boton.setFont(new Font("FreeSans", 25));
         boton.setPrefSize(anchura, altura);
     }

@@ -10,9 +10,9 @@ public class BotonOrdenableHandler implements EventHandler<ActionEvent> {
     private BotonOrdenable boton;
     private EnunciadosOpciones opcionesRespuesta;
 
-    public BotonOrdenableHandler(BotonOrdenable botonAgrupable, EnunciadosOpciones enunciadosOpciones) {
+    public BotonOrdenableHandler(BotonOrdenable botonOrdenable, EnunciadosOpciones enunciadosOpciones) {
 
-        boton = botonAgrupable;
+        boton = botonOrdenable;
         opcionesRespuesta = enunciadosOpciones;
         opcionesRespuesta.agregarEnunciadoNoOrdenado(boton.getText());
     }

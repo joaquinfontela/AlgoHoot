@@ -50,7 +50,7 @@ public class RespuestaGroupChoice extends Respuesta {
     }
 
     @Override
-    public void rellenar(EnunciadosOpciones opcionesParaAgregar) {
+    public void rellenar(EnunciadosOpciones opcionesParaAgregar) throws Exception {
 
         opcionesGrupoA.addAll(opcionesParaAgregar.enunciadosGrupoA());
         opcionesGrupoB.addAll(opcionesParaAgregar.enunciadosGrupoB());

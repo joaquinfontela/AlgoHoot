@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.interfaz.layouts.layoutRegistro;
 
-import edu.fiuba.algo3.controladores.BotonRegistroHandler;
 import edu.fiuba.algo3.interfaz.botones.botonesComunes.BotonRegistro;
 import edu.fiuba.algo3.interfaz.layouts.layoutRegistro.registroSublayouts.LayoutRegistroJugadores;
 import edu.fiuba.algo3.interfaz.layouts.layoutRegistro.registroSublayouts.LayoutSeleccionRondas;
@@ -24,10 +23,7 @@ public class LayoutRegistro extends BorderPane{
         layoutRegistroJugadores = new LayoutRegistroJugadores();
         this.setTop(layoutRegistroJugadores);
 
-        BotonRegistro botonRegistro = new BotonRegistro();
-        botonRegistro.setTranslateX(360.0);
-        botonRegistro.setTranslateY(-30.0);
-        botonRegistro.setOnAction(new BotonRegistroHandler(stage,this));
+        BotonRegistro botonRegistro = new BotonRegistro(stage,this);
         this.setBottom(botonRegistro);
     }
 

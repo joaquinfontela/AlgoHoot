@@ -37,9 +37,9 @@ public class DistribuidorDeDosOpciones extends DistribuidorDeOpcionesGrandes {
                                              Color color, EnunciadosOpciones opcionesRespuesta,
                                              ListaDeBotonesSeleccionables lista) {
 
-        BotonOpcionSeleccionable opcion = new BotonOpcionSeleccionableGrande(enunciado, posicion, color);
+        BotonOpcionSeleccionable opcion = new BotonOpcionSeleccionableGrande(enunciado, posicion,
+                color, opcionesRespuesta);
         lista.add(opcion);
-        opcion.setOnAction(new BotonOpcionSeleccionableHandler(opcion, opcionesRespuesta));
         this.getChildren().add(opcion);
     }
 }

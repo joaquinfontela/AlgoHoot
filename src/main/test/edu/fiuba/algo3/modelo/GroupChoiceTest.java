@@ -44,7 +44,7 @@ public class GroupChoiceTest {
     }
 
     @Test
-    public void test01seCreaUnaPreguntaGroupChoiceYSeVerificaLaOpcionCorrecta() {
+    public void test01seCreaUnaPreguntaGroupChoiceYSeVerificaLaOpcionCorrecta() throws Exception {
 
         RespuestaGroupChoice respuestaCorrectaVerificacion = new RespuestaGroupChoice();
 
@@ -63,7 +63,7 @@ public class GroupChoiceTest {
     }
 
     @Test
-    public void test02seCreaUnaPreguntaGroupChoiceYSeVerificaLaOpcionCorrectaIntercambiandoLosGrupos() {
+    public void test02seCreaUnaPreguntaGroupChoiceYSeVerificaLaOpcionCorrectaIntercambiandoLosGrupos() throws Exception {
 
         RespuestaGroupChoice respuestaCorrectaVerificacion = new RespuestaGroupChoice();
 
@@ -82,7 +82,7 @@ public class GroupChoiceTest {
     }
 
     @Test
-    public void test03seCreaUnaPreguntaGroupChoiceYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test03seCreaUnaPreguntaGroupChoiceYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         Jugador jugador1 = new Jugador("Santiago");
         Jugador jugador2 = new Jugador("Roberto");
@@ -124,7 +124,7 @@ public class GroupChoiceTest {
     }
 
     @Test
-    public void test04seCreaUnaPreguntaGroupChoiceYSeVerificaLaCorrectaAsignacionDePuntos() {
+    public void test04seCreaUnaPreguntaGroupChoiceYSeVerificaLaCorrectaAsignacionDePuntos() throws Exception {
 
         Jugador jugador1 = new Jugador("Santiago");
         Jugador jugador2 = new Jugador("Roberto");
