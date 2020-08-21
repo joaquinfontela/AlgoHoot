@@ -3,6 +3,7 @@ package edu.fiuba.algo3;
 import edu.fiuba.algo3.interfaz.layouts.LayoutInicio;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -29,6 +30,7 @@ public class App extends Application {
         stage.setHeight(720);
         stage.setWidth(1200);
         stage.setResizable(false);
+        stage.getIcons().add(new Image("file:src/imagenes/icon.png"));
         stage.show();
     }
 
